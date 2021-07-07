@@ -7,7 +7,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ asset('/admin') }}">首頁</a></li>
                 <li class="breadcrumb-item"><a href="{{ asset('/admin/contactus') }}">聯繫我們管理首頁</a></li>
-                <li class="breadcrumb-item active" aria-current="page">新增最新消息</li>
+                <li class="breadcrumb-item active" aria-current="page">檢視聯繫訊息</li>
             </ol>
         </nav>
 
@@ -15,7 +15,7 @@
             <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">
-                        <h2>新增最新消息</h2>
+                        <h2>檢視聯繫訊息</h2>
                     </div>
 
                     <div class="card-body">
@@ -24,7 +24,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <form method="POST" action="{{ asset('admin/contactus/store') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ asset('admin/contactus/update') }}/{{ $record->id }}" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group row">
@@ -39,7 +39,7 @@
                                 <label for="name" class="col-md-3 col-form-label text-md-right">{{ __('姓名') }}</label>
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control" name="name"
-                                        value="{{ $record->name }}" readonly autocomplete="title" autofocus>
+                                        value="{{ $record->name }}" readonly >
                                 </div>
                             </div>
 
@@ -47,7 +47,7 @@
                                 <label for="email" class="col-md-3 col-form-label text-md-right">{{ __('信箱') }}</label>
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control" name="email"
-                                        value="{{ $record->email }}" readonly autocomplete="title" autofocus>
+                                        value="{{ $record->email }}" readonly >
                                 </div>
                             </div>
 
@@ -55,7 +55,7 @@
                                 <label for="phone" class="col-md-3 col-form-label text-md-right">{{ __('電話') }}</label>
                                 <div class="col-md-6">
                                     <input id="phone" type="phone" class="form-control" name="phone"
-                                        value="{{ $record->phone }}" readonly autocomplete="title" autofocus>
+                                        value="{{ $record->phone }}" readonly >
                                 </div>
                             </div>
 

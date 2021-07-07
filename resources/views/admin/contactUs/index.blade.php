@@ -22,11 +22,11 @@
         <tbody>
             @foreach ($record as $item)
                 <tr>
-                    <th>{{ $item->name }}</th>
-                    <th>{{ $item->email }}</th>
-                    <th>{{ $item->title }}</th>
-                    <th>{{ $item->content }}</th>
-                    <th>{{ $item->phone }}</th>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->email }}</td>
+                    <td>{{ $item->title }}</td>
+                    <td>{{ $item->content }}</td>
+                    <td>{{ $item->phone }}</td>
                     <td>
                         <a type="button" href="{{ asset('/admin/contactus/edit') }}/{{ $item->id }}"
                             class="btn btn-sm btn-primary">編輯</a>

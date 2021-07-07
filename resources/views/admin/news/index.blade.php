@@ -4,7 +4,7 @@
     <script src="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"></script>
 @endsection
 
-@section('h1_title', '最新首頁')
+@section('h1_title', '最新消息首頁')
 
 @section('main')
     <a type="button" class="btn btn-sm btn-success m-2" href="{{ asset('/admin/news/create') }}">新增</a>
@@ -21,15 +21,16 @@
         <tbody>
             @foreach ($record as $item)
                 <tr>
-                    <td>{{ $item->title }}</td>
+                    <td>{{ Str::limit($item->title, 20) }}</td>
                     <td>{{ Str::limit($item->summary, 20) }}</td> {{-- 限制字數 --}}
                     <td>{{ $item->newsType->type_name }}</td>
                     <td>{{ $item->date }}</td>
                     <td>
-                        <a type="button" href="{{ asset('/admin/contactus/edit') }}/{{ $item->id }}"
+                        <a type="button" href="{{ asset('/admin/news/edit') }}/{{ $item->id }}"
                             class="btn btn-sm btn-primary">編輯</a>
+
                         <form style="display:inline-block;"
-                            action="{{ asset('/admin/contactus/delete') }}/{{ $item->id }}" method="post">
+                            action="{{ asset('/admin/news/delete') }}/{{ $item->id }}" method="post">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-sm btn-danger">刪除</button>

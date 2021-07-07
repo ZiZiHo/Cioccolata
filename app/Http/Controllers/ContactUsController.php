@@ -31,12 +31,14 @@ class ContactUsController extends Controller
     function edit($id)
     {
         $record = ContactUs::get()->find($id);
+    
         // dd($record->all());
         return view('admin.contactUs.edit', compact('record'));
 
     }
-    function update($id)
+    function update(Request $request , $id)
     {
+
         return redirect('/admin/contactus');
     }
     function delete($id)

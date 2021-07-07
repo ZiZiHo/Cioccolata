@@ -47,5 +47,18 @@ Route::prefix('/admin')->group(function(){
         Route::post('/update/{id}','ProductController@update');
         Route::delete('/delete/{id}','ProductController@delete');
     });
+
+    Route::prefix('/user')->group(function(){
+        Route::get('/','UserController@index');
+        Route::get('/create','UserController@create');
+        Route::post('/store','UserController@store');
+        Route::get('/edit/{id}','UserController@edit');
+        Route::post('/update/{id}','UserController@update');
+        Route::delete('/delete/{id}','UserController@delete');
+    });
 });
 Route::get('/index', 'FrontController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

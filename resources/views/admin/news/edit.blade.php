@@ -66,8 +66,7 @@
                                     <select class="form-control" id="news_type_id" name='news_type_id'>
                                         @foreach ($newsType as $item)
                                             @if ($item->id == $record->news_type_id)
-                                                <option selected value={{ $item->id }}>{{ $item->type_name }}
-                                                </option>
+                                                <option selected value={{ $item->id }}>{{ $item->type_name }}</option>
                                             @else
                                                 <option value={{ $item->id }}>{{ $item->type_name }}</option>
                                             @endif

@@ -38,11 +38,11 @@
                     <td>{{ $item->remark }}</td>
                     <td>{{ $item->sort }}</td>
                     <td>
-                        <a type="button" href="{{ asset('/admin/news/edit') }}/{{ $item->id }}"
+                        <a type="button" href="{{ asset('/admin/product/edit') }}/{{ $item->id }}"
                             class="btn btn-sm btn-primary">編輯</a>
 
                         <form style="display:inline-block;"
-                            action="{{ asset('/admin/news/delete') }}/{{ $item->id }}" method="post">
+                            action="{{ asset('/admin/product/delete') }}/{{ $item->id }}" method="post">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-sm btn-danger">刪除</button>

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+}
+
+.container{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+a {
+    color: unset;
+}
+a:hover {
+    color: unset;
+    text-decoration: unset;
+}
+a:visited {
+    color: unset;
+}
+h1 {
+    font-weight: bold;
+    font-size: 44px;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 40px;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h5 {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+h6 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0%;
+}
+p {
+    font-size: 18px;
+    margin: 0%;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+$color-gray-1: #4d4d4d;
+$color-gray-2: #4c4c4b;
+$color-gray-3: #808080;
+$color-brown: #c69c6d;
+$color-white: #ffffff;
+
+$color-pink-hover: #f5e2d6;
+$color-brown-1-honver: #e6d5bc;
+$color-brown-2-honver: #d0ae85;
+$color-brown-3-hover: #ebe2d8;
+$color-gray-1-hover: #b9afa7;
+$color-orange-hover: #f6c7a5;
+$color-red: red;
+

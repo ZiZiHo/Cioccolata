@@ -1,0 +1,288 @@
+main {
+  width: 100%;
+  position: relative;
+}
+
+main .banner {
+  width: 100%;
+  height: 575px;
+  background-image: url(/img/knowcoco-banner-1920x575.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main .title {
+  width: 510px;
+  height: 140px;
+  padding-top: 54px;
+  background-color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 488px;
+  left: calc(50% - 255px);
+}
+
+main .title h1 {
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+
+main .title h5 {
+  color: #808080;
+  letter-spacing: 3px;
+}
+
+main .cocoa {
+  margin: auto;
+  margin-top: 156px;
+  width: 85%;
+  height: 805px;
+  background-image: url(/img/knowcoco-1637x805.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main .content {
+  margin: auto;
+  margin-top: 80px;
+  width: 58%;
+}
+
+main .content h1 {
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+main .content hr {
+  width: 230px;
+  height: 1px;
+  background-color: #bb916d;
+  position: relative;
+  top: -10px;
+}
+
+main .content h4 {
+  margin: auto;
+  margin-top: 100px;
+  line-height: 60px;
+}
+
+main .plant {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 304px;
+  margin-bottom: 100px;
+}
+
+main .plant .photo-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .plant .photo-group .left {
+  margin-right: 45px;
+}
+
+main .plant .photo-group .left .pic-1 {
+  background-image: url(/img/knowcoco-01-523x520.jpg);
+  margin-bottom: 45px;
+}
+
+main .plant .photo-group .left .pic-3 {
+  background-image: url(/img/knowcoco-03-523x520.jpg);
+}
+
+main .plant .photo-group .right {
+  margin-top: 77px;
+}
+
+main .plant .photo-group .right .pic-2 {
+  background-image: url(/img/knowcoco-02-523x520.jpg);
+  margin-bottom: 45px;
+}
+
+main .plant .photo-group .right .pic-4 {
+  background-image: url(/img/knowcoco-04-523x520.jpg);
+}
+
+main .plant .photo-group .pic-1,
+main .plant .photo-group .pic-2,
+main .plant .photo-group .pic-3,
+main .plant .photo-group .pic-4 {
+  width: 524px;
+  height: 520px;
+  background-position: center;
+  background-size: cover;
+}
+
+main .plant .method .method-content {
+  margin: auto;
+  width: 70%;
+  margin-top: 100px;
+  position: relative;
+}
+
+main .plant .method .method-content .method-title h1 {
+  letter-spacing: 5px;
+  text-align: left;
+}
+
+main .plant .method .method-content .method-title hr {
+  width: 190px;
+  height: 1px;
+  background-color: #bb916d;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
+
+main .plant .method .method-content h4 {
+  margin: auto;
+  margin-top: 50px;
+  line-height: 60px;
+}
+
+@media (max-width: 1750px) {
+  .plant .photo-group {
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .plant .photo-group .left {
+    margin-right: 0px !important;
+  }
+  .plant .photo-group .right {
+    margin-top: 45px !important;
+  }
+  .plant .method {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (max-width: 1080px) {
+  .plant {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .plant .photo-group {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .plant .photo-group .left {
+    margin-right: 0px !important;
+  }
+  .plant .photo-group .right {
+    margin-top: 45px !important;
+  }
+  .plant .method {
+    margin: auto;
+    width: 100%;
+  }
+  .plant .method .method-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  main .cocoa {
+    width: 100%;
+    height: 600px;
+  }
+  main .content {
+    width: 90%;
+  }
+  .plant .method .method-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 536px) {
+  main .banner {
+    width: 100%;
+    height: 300px;
+  }
+  main .title {
+    width: 250px;
+    height: 140px;
+    padding-top: 25px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    top: 260px;
+    left: calc(50% - 125px);
+  }
+  main .title h1 {
+    letter-spacing: 2px;
+  }
+  main .cocoa {
+    width: 100%;
+    height: 505px;
+  }
+  main .content {
+    width: 90%;
+  }
+  main .plant {
+    margin-top: 100px;
+  }
+  main .plant .photo-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  main .plant .photo-group .left {
+    width: 100%;
+    margin: 0px;
+  }
+  main .plant .photo-group .left .pic-1,
+  main .plant .photo-group .left .pic-3 {
+    width: 100%;
+    height: 400px;
+  }
+  main .plant .photo-group .right {
+    width: 100%;
+    margin: 0px;
+  }
+  main .plant .photo-group .right .pic-2,
+  main .plant .photo-group .right .pic-4 {
+    width: 100%;
+    height: 400px;
+  }
+  main .plant .method {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=chocolate.css.map */

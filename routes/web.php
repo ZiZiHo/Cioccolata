@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/testindex', function () {
     return view('welcome');
 });
+
+Route::get('/','FrontController@index');
+
 
 Route::prefix('/admin')->group(function(){
     Route::get('/','AdminController@index');
@@ -56,9 +59,36 @@ Route::prefix('/admin')->group(function(){
         Route::post('/update/{id}','UserController@update');
         Route::delete('/delete/{id}','UserController@delete');
     });
+
+    Route::prefix('/order')->group(function(){
+        Route::get('/','OrderController@index');
+        Route::get('/create','OrderController@create');
+        Route::post('/store','OrderController@store');
+        Route::get('/edit/{id}','OrderController@edit');
+        Route::post('/update/{id}','OrderController@update');
+        Route::delete('/delete/{id}','OrderController@delete');
+    });
 });
 Route::get('/index', 'FrontController@index');
 
 Auth::routes();
+
+
+// // Authentication Routes...
+// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+// Route::post('login', 'Auth\LoginController@login');
+// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// // Registration Routes...
+// Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+// Route::post('register', 'Auth\RegisterController@register');
+
+// // Password Reset Routes...
+// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+// Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+// Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+// Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');

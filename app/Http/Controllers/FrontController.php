@@ -10,8 +10,7 @@ class FrontController extends Controller
     //
     function index()
     {
-        $test = ContactUs::get()->find('1');
-
-        return view('admin.contactUs.index');
+        
+        return view('front.index');
     }
 }

@@ -27,7 +27,7 @@
                     <td>{{ $item->email }}</td>
                     <td>{{ $item->gender }}</td>
                     <td>{{ $item->birthday }}</td>
-                    <td>{{ $item->contact }}</td>
+                    <td>{{ $item->phone }}</td>
                     <td>{{ $item->address }}</td>
                     <td>
                         <a type="button" href="{{ asset('/admin/user/edit') }}/{{ $item->id }}"

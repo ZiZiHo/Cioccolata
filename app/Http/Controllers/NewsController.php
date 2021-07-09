@@ -13,7 +13,7 @@ class NewsController extends Controller
     function index()
     {
         $record = News::get();
-
+       
         return view('admin.news.index' , compact('record'));
     }
 

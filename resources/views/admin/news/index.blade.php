@@ -24,7 +24,7 @@
                     <td>{{ Str::limit($item->title, 20) }}</td>
                     <td>{{ Str::limit($item->summary, 20) }}</td> {{-- 限制字數 --}}
                     <td>{{ $item->newsType->type_name }}</td>
-                    <td>{{ $item->date }}</td>
+                    <td>{{ date('m-d', strtotime($item->date)) }}</td>
                     <td>
                         <a type="button" href="{{ asset('/admin/news/edit') }}/{{ $item->id }}"
                             class="btn btn-sm btn-primary">編輯</a>

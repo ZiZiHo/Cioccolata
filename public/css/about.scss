@@ -1,3 +1,5 @@
+@import "_style_guide.scss";
+
 main {
     transition: 1s;
     position: relative;
@@ -14,20 +16,18 @@ main {
         width: 510px;
         height: 140px;
         padding-top: 54px;
-        background-color: #fff;
+        background-color: $bgc-white;
         text-align: center;
         position: absolute;
         top: 488px;
         left: calc(50% - 255px);
 
         h1 {
-            letter-spacing: 5px;
-            font-weight: 600;
+            color: $fc-title;
         }
 
         h5 {
-            color: #808080;
-            letter-spacing: 3px;
+            color: $fc-title-en;
         }
     }
 
@@ -56,8 +56,8 @@ main {
                 height: 460px;
                 position: relative;
 
-                h1 {
-                    letter-spacing: 5px;
+                h2 {
+                    color: $fc-title;
                 }
 
                 hr {
@@ -71,7 +71,7 @@ main {
 
                 h4 {
                     margin-top: 99px;
-                    line-height: 50px;
+                    line-height: 50px; 
                 }
             }
         }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>巧遇農情</title>
+    <title>@yield('title')</title>
 
     <!-- Google 中文字形 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,12 +37,12 @@
 
     <nav>
         <ul class="main">
-            <li><a href="#0">關於我們</a></li>
-            <li><a href="#0">認識巧克力</a></li>
-            <li><a href="#0">最新消息</a></li>
-            <li><a href="#0">瑪雅巧克力DIY</a></li>
-            <li><a href="#0">產品介紹</a></li>
-            <li><a href="#0">聯絡我們</a></li>
+            <li><a href="{{ asset('/about') }}">關於我們</a></li>
+            <li><a href="{{ asset('/knowledge') }}">認識巧克力</a></li>
+            <li><a href="">最新消息</a></li>
+            <li><a href="{{ asset('/diy') }}">瑪雅巧克力DIY</a></li>
+            <li><a href="{{ asset('/product') }}">產品介紹</a></li>
+            <li><a href="#contactus">聯絡我們</a></li>
             <li><a href="#0"><i class="fal fa-shopping-cart"></i> 購物車</a></li>
             <li><a href="#0"><i class="fal fa-user-alt"></i> 會員登入</a></li>
             <li>
@@ -61,7 +61,7 @@
         @yield('main')
     </main>
 
-    <footer>
+    <footer id="contactus">
 
         <div class="footer-box">
 

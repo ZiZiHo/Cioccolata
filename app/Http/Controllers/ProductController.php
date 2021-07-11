@@ -80,6 +80,6 @@ class ProductController extends Controller
 
         $request->delete();
 
-        return redirect('/admin/news')->with('message','刪除成功');
+        return redirect('/admin/product')->with('message','刪除成功');
     }
 }

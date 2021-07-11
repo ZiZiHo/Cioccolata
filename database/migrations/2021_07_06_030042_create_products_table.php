@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('weight')->comment('產品重量');
             $table->string('EXP')->comment('保存期限');
             $table->string('temp')->comment('保存溫度');
-            $table->longText('remark')->comment('備註');
+            $table->longText('remark')->comment('備註')->nullable();
             $table->integer('sort')->comment('推薦序');
             $table->timestamps();
         });

@@ -19,6 +19,10 @@ Route::get('/testindex', function () {
 });
 
 Route::get('/','FrontController@index');
+Route::get('/about','FrontController@about');
+Route::get('/knowledge','FrontController@knowledge');
+Route::get('/diy','FrontController@diy');
+Route::get('/product','FrontController@product');
 
 
 Route::prefix('/admin')->group(function(){

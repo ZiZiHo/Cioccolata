@@ -1,11 +1,12 @@
 @extends('layouts.nav_footer')
+@section('title','巧遇農情')
 @section('css')
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- index -->
-    <link rel="stylesheet" href="{{ asset('scss/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
 
 

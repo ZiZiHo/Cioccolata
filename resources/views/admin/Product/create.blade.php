@@ -45,7 +45,6 @@
                                 <label for="product_type_id" class="col-md-3 col-form-label text-md-right">產品種類</label>
                                 <div class="col-md-6">
                                     <select class="form-control" id="product_type_id" name='product_type_id'>
-                                        <option value= 1>巧克力脆片</option>
                                         @foreach ($ProductType as $item)
                                             <option value= {{ $item->id }}>{{ $item->product_type_name }}</option>
                                         @endforeach

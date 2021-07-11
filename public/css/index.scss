@@ -37,6 +37,9 @@
     .swiper-container {
         width: 100%;
         height: 100vh;
+
+        .swiper-slide {
+        }
     }
     .logo {
         background-image: url(/img/index/CHOMEET-LOGO-White.svg);
@@ -111,7 +114,6 @@
                 &:nth-child(2) {
                     margin-bottom: 50px;
                 }
-    
             }
 
             @include pad {
@@ -119,7 +121,6 @@
                 &:nth-child(2) {
                     margin-bottom: 75px;
                 }
-    
             }
         }
     }
@@ -145,17 +146,21 @@
 
         //768 出現
         .title {
-            letter-spacing: 5px;
             h1 {
-                font-size: 44px;
+                // font-size: 44px;
                 margin-bottom: 5px;
-                color: rgb(77, 77, 77);
+                color: $fc-title;
             }
             h5 {
                 margin-bottom: 50px;
-                margin-left: 225px;
-                color: rgb(128, 128, 128);
+                margin-left: 110px;
+
+                color: $fc-title-en;
                 position: relative;
+
+                @include pad {
+                    margin-left: 225px;
+                }
 
                 @include desktop {
                     margin-bottom: 95px;
@@ -163,11 +168,11 @@
 
                 &::after {
                     content: "";
-                    width: 190px;
-                    height: 2px;
-                    background-color: rgb(187, 145, 109);
+                    width: 30%;
+                    height: 1px;
+                    background-color: $fc-line;
                     position: absolute;
-                    left: -200px;
+                    right: 105%;
                     top: 50%;
                 }
             }
@@ -180,7 +185,7 @@
                 content: "";
                 width: 90%;
                 height: 100%;
-                background-color: rgb(215, 197, 187);
+                background-color: $bgc-about;
 
                 position: absolute;
                 right: -8.8%;
@@ -191,12 +196,9 @@
                     content: "";
                     width: 100%;
                     height: 100%;
-                    background-color: rgb(215, 197, 187);
 
-                    position: absolute;
                     left: 30px;
                     bottom: 20px;
-                    z-index: -1;
                 }
             }
 
@@ -217,16 +219,14 @@
             }
 
             .title {
-                letter-spacing: 5px;
                 h1 {
-                    font-size: 44px;
                     margin-bottom: 5px;
-                    color: rgb(77, 77, 77);
+                    color: $fc-title;
                 }
                 h5 {
                     margin-bottom: 50px;
                     margin-left: 225px;
-                    color: rgb(128, 128, 128);
+                    color: $fc-title-en;
                     position: relative;
 
                     @include desktop {
@@ -235,17 +235,16 @@
 
                     &::after {
                         content: "";
-                        width: 190px;
-                        height: 2px;
-                        background-color: rgb(187, 145, 109);
+                        width: 185px;
+                        height: 1px;
+                        background-color: $fc-line;
                         position: absolute;
-                        right: 110px;
+                        right: 100px;
                         top: 50%;
                     }
                 }
             }
             p {
-                font-size: 20px;
                 line-height: 40px;
                 margin-bottom: 60px;
                 margin-top: 70px;
@@ -259,38 +258,55 @@
                 }
             }
             .link {
-                width: 200px;
-                height: 60px;
+                width: 120px;
+                height: 35px;
                 padding-bottom: 10px;
                 padding-right: 20px;
 
                 position: relative;
-                font-size: 24px;
+                color: $fc-link;
 
-                color: rgb(187, 145, 109);
+                @include pad {
+                    width: 200px;
+                    height: 60px;
+                }
 
                 i {
-                    font-size: 30px;
+                    font-size: 20px;
+
+                    @include pad {
+                        font-size: 30px;
+                    }
                 }
                 &::after {
                     content: "";
-                    width: 147px;
+                    width: 100px;
                     height: 1px;
-                    background-color: rgb(187, 145, 109);
+                    background-color: $fc-line;
                     position: absolute;
-                    right: 0px;
-                    top: 50px;
+                    right: 8px;
+                    top: 25px;
+
+                    @include pad {
+                        width: 147px;
+                        right: 0px;
+                        top: 50px;
+                    }
                 }
 
                 &:hover {
                     color: white;
                     font-weight: bold;
-                    background-color: #964915;
+                    background-color: $comp-link-hover;
                     opacity: 0.6;
 
                     &::after {
                         background-color: white;
-                        height: 3px;
+                        height: 2px;
+
+                        @include pad {
+                            height: 3px;
+                        }
                     }
                 }
             }
@@ -363,32 +379,36 @@
         }
 
         .row {
-            //968px 以上出現的title
+            //968px 以下出現的title
             .title {
-                letter-spacing: 5px;
-
                 h1 {
-                    font-size: 44px;
-                    color: rgb(77, 77, 77);
+                    color: $fc-title;
                     margin-bottom: 10px;
                 }
                 h5 {
                     margin-bottom: 30px;
-                    margin-left: 255px;
-                    color: rgb(128, 128, 128);
+                    margin-left: 120px;
+                    color: $fc-title-en;
                     position: relative;
 
                     @include pad {
                         margin-bottom: 95px;
+                        margin-left: 255px;
                     }
                     &::after {
                         content: "";
-                        width: 200px;
-                        height: 2px;
-                        background-color: rgb(187, 145, 109);
+                        width: 90px;
+                        height: 1px;
+                        background-color: $fc-line;
                         position: absolute;
-                        left: -220px;
+                        left: -100px;
                         top: 50%;
+
+                        @include pad {
+                            width: 200px;
+                            left: -220px;
+                            top: 50%;
+                        }
                     }
                 }
             }
@@ -430,7 +450,6 @@
                     }
                 }
                 p {
-                    font-size: 20px;
                     line-height: 40px;
                     margin-bottom: 50px;
 
@@ -443,36 +462,55 @@
                     }
                 }
                 .link {
-                    width: 200px;
-                    height: 60px;
+                    width: 120px;
+                    height: 35px;
                     padding-bottom: 10px;
                     padding-right: 20px;
 
                     position: relative;
-                    font-size: 24px;
-                    color: rgb(187, 145, 109);
+                    color: $fc-link;
+
+                    @include pad {
+                        width: 200px;
+                        height: 60px;
+                    }
+
                     i {
-                        font-size: 30px;
+                        font-size: 20px;
+
+                        @include pad {
+                            font-size: 30px;
+                        }
                     }
                     &::after {
                         content: "";
-                        width: 147px;
+                        width: 100px;
                         height: 1px;
-                        background-color: rgb(187, 145, 109);
+                        background-color: $fc-line;
                         position: absolute;
-                        right: -25px;
-                        top: 45px;
+                        right: 8px;
+                        top: 25px;
+
+                        @include pad {
+                            width: 147px;
+                            right: 0px;
+                            top: 50px;
+                        }
                     }
 
                     &:hover {
                         color: white;
                         font-weight: bold;
-                        background-color: #964915;
+                        background-color: $comp-link-hover;
                         opacity: 0.6;
 
                         &::after {
                             background-color: white;
-                            height: 3px;
+                            height: 2px;
+
+                            @include pad {
+                                height: 3px;
+                            }
                         }
                     }
                 }
@@ -562,24 +600,22 @@
 
         //768 出現title
         .title {
-            letter-spacing: 5px;
             h1 {
-                font-size: 44px;
                 margin-bottom: 10px;
-                color: rgb(77, 77, 77);
+                color: $fc-title;
             }
             h5 {
-                margin-bottom: 25px;
-                margin-left: 245px;
-                color: rgb(128, 128, 128);
+                margin-bottom: 30px;
+                margin-left: 120px;
+                color: $fc-title-en;
                 position: relative;
                 &::after {
                     content: "";
-                    width: 200px;
-                    height: 2px;
-                    background-color: rgb(187, 145, 109);
+                    width: 90px;
+                    height: 1px;
+                    background-color: $fc-line;
                     position: absolute;
-                    left: -210px;
+                    left: -100px;
                     top: 50%;
                 }
             }
@@ -598,8 +634,8 @@
                 margin-bottom: 100px;
                 letter-spacing: 5px;
                 h1 {
-                    font-size: 44px;
                     margin-bottom: 10px;
+
                     color: rgb(77, 77, 77);
                 }
                 h5 {
@@ -607,6 +643,7 @@
                     margin-left: 245px;
                     color: rgb(128, 128, 128);
                     position: relative;
+
                     &::after {
                         content: "";
                         width: 200px;
@@ -717,6 +754,7 @@
                         h3 {
                             font-size: 14px;
                             font-weight: bold;
+                            letter-spacing: 0px;
                             overflow: hidden;
                             white-space: nowrap;
                             text-overflow: ellipsis;
@@ -727,6 +765,7 @@
                         }
                         p {
                             font-size: 12px;
+                            letter-spacing: 0px;
                             overflow: hidden;
                             white-space: nowrap;
                             text-overflow: ellipsis;
@@ -796,40 +835,58 @@
         }
 
         .link {
-            width: 200px;
-            height: 60px;
+            width: 120px;
+            height: 35px;
             padding-bottom: 10px;
             padding-right: 20px;
             text-align: center;
             margin-top: 25px;
             position: relative;
-            font-size: 24px;
-            text-decoration: none;
-            color: rgb(187, 145, 109);
+
+            color: $fc-link;
+
+            @include pad {
+                width: 200px;
+                height: 60px;
+            }
 
             i {
-                font-size: 30px;
+                font-size: 20px;
+
+                @include pad {
+                    font-size: 30px;
+                }
             }
 
             &::after {
                 content: "";
-                width: 140px;
+                width: 100px;
                 height: 1px;
-                background-color: rgb(187, 145, 109);
+                background-color: $fc-line;
                 position: absolute;
-                left: 60px;
-                top: 45px;
+                right: 8px;
+                top: 25px;
+
+                @include pad {
+                    width: 147px;
+                    right: 0px;
+                    top: 50px;
+                }
             }
 
             &:hover {
                 color: white;
                 font-weight: bold;
-                background-color: #964915;
+                background-color: $comp-link-hover;
                 opacity: 0.6;
 
                 &::after {
                     background-color: white;
-                    height: 3px;
+                    height: 2px;
+
+                    @include pad {
+                        height: 3px;
+                    }
                 }
             }
         }
@@ -880,31 +937,40 @@
     }
 }
 
+//巧克力品項
 .section-5 {
     margin-bottom: 80px;
     .container {
         max-width: 1920px;
         .title {
-            letter-spacing: 5px;
             text-align: center;
             h1 {
-                font-size: 44px;
                 font-weight: bold;
                 margin-bottom: 10px;
-                color: rgb(77, 77, 77);
+                color: $fc-title;
             }
             h5 {
-                margin-bottom: 95px;
-                color: rgb(128, 128, 128);
+                margin-bottom: 40px;
+                color: $fc-title-en;
                 position: relative;
+
+                @include pad {
+                    margin-bottom: 95px;
+                }
                 &::after {
                     content: "";
-                    width: 200px;
-                    height: 3px;
-                    background-color: rgb(187, 145, 109);
+                    width: 100px;
+                    height: 1px;
+                    background-color: $fc-line;
                     position: absolute;
-                    top: 40px;
-                    left: calc(50% - 100px);
+                    top: 20px;
+                    left: calc(50% - 50px);
+
+                    @include pad {
+                        width: 200px;
+                        top: 40px;
+                        left: calc(50% - 100px);
+                    }
                 }
             }
         }
@@ -926,16 +992,24 @@
                     .card-body {
                         padding-top: 28px;
                         .product_name {
-                            margin-bottom: 16px;
+                            margin-bottom: 0px;
                             font-weight: bold;
+                            letter-spacing: 0;
+                            @include pad {
+                                margin-bottom: 16px;
+                            }
+                        }
+
+                        .content {
+                            margin-bottom: 20px;
+                            @include pad {
+                                margin-bottom: 0px;
+                            }
                         }
                         .price {
                             text-align: end;
-                            font-size: 18px;
+
                             font-weight: bold;
-                        }
-                        .content {
-                            font-size: 18px;
                         }
                     }
                 }
@@ -943,39 +1017,55 @@
         }
 
         .link {
-            width: 200px;
-            height: 60px;
+            width: 120px;
+            height: 40px;
             padding-bottom: 10px;
             padding-right: 20px;
 
-            text-align: center;
             position: relative;
-            font-size: 24px;
+            color: $fc-link;
 
-            color: rgb(187, 145, 109);
+            @include pad {
+                width: 200px;
+                height: 60px;
+            }
 
             i {
-                font-size: 25px;
+                font-size: 20px;
+
+                @include pad {
+                    font-size: 30px;
+                }
             }
             &::after {
                 content: "";
-                width: 160px;
+                width: 100px;
                 height: 1px;
-                background-color: rgb(187, 145, 109);
+                background-color: $fc-line;
                 position: absolute;
-                left: 40px;
-                top: 45px;
+                right: 4px;
+                top: 25px;
+
+                @include pad {
+                    width: 147px;
+                    right: 0px;
+                    top: 50px;
+                }
             }
 
             &:hover {
                 color: white;
                 font-weight: bold;
-                background-color: #964915;
+                background-color: $comp-link-hover;
                 opacity: 0.6;
 
                 &::after {
                     background-color: white;
-                    height: 3px;
+                    height: 2px;
+
+                    @include pad {
+                        height: 3px;
+                    }
                 }
             }
         }
@@ -998,7 +1088,7 @@
     }
 
     @include desktop {
-        margin-top: 250px;
+        margin-top: 350px;
     }
 
     .pic-gray {

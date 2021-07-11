@@ -63,7 +63,7 @@
     </nav>
 
     <main>
-        <div class="container ">
+        <div class="container" style="max-width: 85%;">
             <h1>
                 @yield('h1_title')
             </h1>

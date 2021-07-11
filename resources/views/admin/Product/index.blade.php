@@ -8,15 +8,15 @@
 
 @section('main')
     <a type="button" class="btn btn-sm btn-success m-2" href="{{ asset('/admin/product/create') }}">新增</a>
-    <table id="example" class="display container" style="width:100%">
+    <table id="example" class="display container" style="max-width: 100%;">
         <thead>
             <tr>
-                <th>產品名稱</th>
-                <th>產品類別</th>
-                <th>產品價格</th>
-                <th>產品內容物單位</th>
-                <th>產品成分</th>
-                <th>產品重量</th>
+                <th>名稱</th>
+                <th>類別</th>
+                <th>價格</th>
+                <th>單位</th>
+                <th>成分</th>
+                <th>重量</th>
                 <th>保存期限</th>
                 <th>保存溫度</th>
                 <th>備註</th>
@@ -28,7 +28,7 @@
             @foreach ($record as $item)
                 <tr>
                     <td>{{ $item->name }}</td>
-                    <td>{{ $item->product_type_id }}</td>
+                    <td>{{ $item->productType->product_type_name }}</td>
                     <td>{{ $item->price }}</td>
                     <td>{{ $item->unit }}</td>
                     <td>{{ $item->ingredient }}</td>
@@ -52,12 +52,12 @@
             @endforeach
         <tfoot>
             <tr>
-                <th>產品名稱</th>
-                <th>產品類別</th>
-                <th>產品價格</th>
-                <th>產品內容物單位</th>
-                <th>產品成分</th>
-                <th>產品重量</th>
+                <th>名稱</th>
+                <th>類別</th>
+                <th>價格</th>
+                <th>單位</th>
+                <th>成分</th>
+                <th>重量</th>
                 <th>保存期限</th>
                 <th>保存溫度</th>
                 <th>備註</th>

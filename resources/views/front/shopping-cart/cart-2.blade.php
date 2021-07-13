@@ -35,8 +35,8 @@
                 </div>
             </div>
 
-            <form action="/shopping-car/2/check" method="POST" >
-            @csrf
+            <form action="/shopping-car/2/check" method="POST">
+                @csrf
                 <!-- 收貨人資料 -->
                 <div class="recive-info">
                     <hr>
@@ -44,24 +44,32 @@
                         <div class="col-md-6 col-12">
                             <h3>收貨人資料</h3>
                         </div>
+                        @guest
                         <div class="col-md-6 col-12">
-                            <input type="checkbox" name="different"  id="different">&nbsp;&nbsp;
+                            <input type="checkbox" name="different" disabled id="different">&nbsp;&nbsp;
                             <span class="different">收件人與會員資料相同</span>
-
                         </div>
+                        @else
+                            <div class="col-md-6 col-12">
+                                <input type="checkbox" name="different" id="different">&nbsp;&nbsp;
+                                <span class="different">收件人與會員資料相同</span>
+
+                            </div>
+                        @endguest
+
                     </div>
 
                     <!-- 姓名 -->
                     <div class="form-group row">
                         <label for="name" class="col-md-2 col-form-label mytag"><span class=required>*</span>姓名：</label>
                         <div class="col-md-4">
-                            <input type="text" name='name' class="form-control readonly" id="name" >
+                            <input type="text" name='name' class="form-control readonly" id="name">
                         </div>
                         <label for="gender" class="col-md-2 col-form-label mytag">稱謂：</label>
                         <div class="col-md-4">
-                            <input type="radio" class="gender" name="gender" value='先生' checked ><span class="txt"> 先生</span>
+                            <input type="radio" class="gender" name="gender" value='先生' checked><span class="txt"> 先生</span>
                             &nbsp; &nbsp; &nbsp;
-                            <input type="radio" class="gender" name="gender" value='小姐' ><span class="txt"> 小姐</span>
+                            <input type="radio" class="gender" name="gender" value='小姐'><span class="txt"> 小姐</span>
                         </div>
                     </div>
 
@@ -69,7 +77,7 @@
                     <div class="form-group row">
                         <label for="mobile" class="col-md-2 col-form-label mytag"><span class=required>*</span>手機：</label>
                         <div class="col-md-4">
-                            <input type="number" class="form-control readonly " name="phone" id="mobile" >
+                            <input type="number" class="form-control readonly " name="phone" id="mobile">
                         </div>
 
                     </div>
@@ -78,7 +86,7 @@
                     <div class="form-group row">
                         <label for="email" class="col-md-2 col-form-label mytag"><span class=required>*</span>email：</label>
                         <div class="col-md-10">
-                            <input type="text" name='email' class="form-control readonly" id="email" >
+                            <input type="text" name='email' class="form-control readonly" id="email">
                         </div>
                     </div>
 
@@ -86,10 +94,10 @@
                     <div class="form-group row city-selector-set">
                         <label for="address" class="col-md-2 col-form-label mytag"><span class=required>*</span>地址：</label>
                         <div class="col-md-4 col-4">
-                            <select class="county form-control readonly" ></select>
+                            <select class="county form-control readonly"></select>
                         </div>
                         <div class="col-md-3 col-4">
-                            <select class="district form-control readonly" ></select>
+                            <select class="district form-control readonly"></select>
                         </div>
                         <div class="col-md-3 col-4">
                             <input class="zipcode form-control" name="zipcode" type="text" size="3" readonly
@@ -100,7 +108,7 @@
                     <div class="form-group row">
                         <label for="address" class="col-md-2 col-form-label mytag"></label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control readonly" id="address" name="address" >
+                            <input type="text" class="form-control readonly" id="address" name="address">
                         </div>
                     </div>
                     <hr>
@@ -150,7 +158,7 @@
 
                 <!-- 按鈕 -->
                 <div class="form-group row button-area">
-                    <button type="submit" class="btn mybtn back">返回修改</button>
+                    <a href="/shopping-car/1" type="submit" class="btn mybtn back">返回修改</a>
                     <button type="submit" class="btn mybtn">下一步</button>
                 </div>
 
@@ -191,11 +199,11 @@
                 });
             } else {
                 readonlyInput.forEach(element => {
-                    element.setAttribute('readonly' , "");
+                    element.setAttribute('readonly', "");
                 });
 
                 gender.forEach(element => {
-                    element.setAttribute('disabled' , "");
+                    element.setAttribute('disabled', "");
                 });
             }
         });

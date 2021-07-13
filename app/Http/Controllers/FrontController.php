@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Order;
 use App\Product;
 use App\ContactUs;
 use App\ProductType;
 use App\Order_detail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class FrontController extends Controller
@@ -73,7 +75,7 @@ class FrontController extends Controller
     public function shoppingCarFourth()
     {
         $cartProducts = \Cart::getContent();
-        return view('front.shopping-cart.cart-4' , compact('cartProducts'));
+        return view('front.shopping-cart.cart-4', compact('cartProducts'));
     }
     public function add(Request $request)
     {
@@ -114,20 +116,24 @@ class FrontController extends Controller
 
     public function orderCheck(Request $request)
     {
-
+        $requestData = $request;
         // todo 會員資料代入
+        if ($requestData->different == 'on') {
+            $member_id = Auth::id();
+            $requestData = User::where('id', $member_id)->get()->first();
+        }
+
         $orederNumber = 'COCOA' . time() . rand(1, 999);
-        $address = $request->zipcode . $request->county . $request->district . $request->address;
-
-
+        $address = $requestData->zipcode . $requestData->county . $requestData->district . $requestData->address;
 
         $order['order_no'] = $orederNumber;
-        $order['name'] = $request->name;
-        $order['phone'] = $request->phone;
-        $order['gender'] = $request->gender;
-        $order['email'] = $request->email;
+        $order['name'] = $requestData->name;
+        $order['phone'] = $requestData->phone;
+        $order['gender'] = $requestData->gender;
+        $order['email'] = $requestData->email;
         $order['address'] = $address;
         // $order['price'] = 99999999;
+        // 以下是會員資料無關內容
         $order['pay_type'] = $request->payment;
         $order['invoice'] = $request->invoice;
         $order['shipping'] = $request->shipment;

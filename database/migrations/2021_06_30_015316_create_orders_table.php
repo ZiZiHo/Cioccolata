@@ -20,10 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('name')->nullable();
             $table->string('phone');
             $table->string('email');
-            $table->string('county');
-            $table->string('district');
-            $table->string('zipcode');
-            $table->string('address');
+            $table->longText('address');
             $table->integer('price');
             $table->string('pay_type');
             $table->integer('is_paid')->default(0);
@@ -31,6 +28,8 @@ class CreateOrdersTable extends Migration
             $table->integer('shipping_fee')->comment('運費');
             $table->integer('shipping_status_id');
             $table->integer('order_status_id');
+            $table->string('invoice')->comment('發票');
+
             $table->longText('remark')->nullable()->comment('備註欄');
             $table->timestamps();
         });

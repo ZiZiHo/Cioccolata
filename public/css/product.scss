@@ -30,6 +30,12 @@
     }
 }
 
+.type-click{
+    border-top: 3px solid #d0ae85;
+    border-right: 3px solid #d0ae85;
+    border-left: 3px solid #d0ae85;
+}
+
 .banner {
     position: relative;
 
@@ -43,6 +49,10 @@
         max-width: 100%;
         min-height: 236px;
         z-index: -1;
+
+        @include mobile {
+            content: url(/img/news/news-1920x575.jpg);
+        }
     }
     margin-bottom: 40px;
 
@@ -125,6 +135,8 @@
                 height: 90px;
             }
 
+
+
             h3 {
                 line-height: 30px;
 
@@ -134,11 +146,9 @@
                 @include desktop {
                     line-height: 90px;
                 }
+
                 &:hover {
                     position: relative;
-                    border-top: 3px solid #d0ae85;
-                    border-right: 3px solid #d0ae85;
-                    border-left: 3px solid #d0ae85;
                     &::after {
                         content: "";
                         width: 60%;
@@ -231,7 +241,7 @@
             text-align: center;
             padding: 25px 0px;
 
-            @include pad{
+            @include pad {
                 text-align: start;
                 padding-right: 0%;
             }
@@ -253,7 +263,7 @@
                 position: relative;
                 padding: 0 15%;
 
-                @include pad{
+                @include pad {
                     padding: 0%;
                 }
 
@@ -276,7 +286,7 @@
                     height: 3px;
                     background-color: $fc-line;
 
-                    @include pad{
+                    @include pad {
                         position: absolute;
                         top: 0px;
                         left: 0px;
@@ -345,7 +355,7 @@
                         text-align: center;
                         background-color: $comp-product-qty-btn;
                         border: none;
-                        
+
                         &::placeholder {
                             color: white;
                             opacity: 1;
@@ -394,7 +404,7 @@
 .section-2 {
     margin-bottom: 40px;
 
-    @include pad{
+    @include pad {
         margin-bottom: 190px;
     }
     .container {
@@ -433,7 +443,6 @@
                             color: white;
 
                             p {
-                               
                                 text-align: center;
                             }
                         }
@@ -625,15 +634,14 @@
             justify-content: center;
             align-items: center;
 
-            @include pad{
+            @include pad {
                 display: none;
-
             }
             .arrow {
                 width: 50px;
                 height: 50px;
                 background-color: $comp-link;
-                &:hover{
+                &:hover {
                     background-color: $comp-link-hover;
                 }
                 i {
@@ -654,11 +662,10 @@
                     position: relative;
                     text-align: center;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                         color: $comp-link-hover;
                     }
-                   
                 }
             }
         }
@@ -666,26 +673,24 @@
 }
 
 .pics {
-
     img {
         width: 100%;
         margin-bottom: 30px;
         z-index: 2;
-    
-
 
         @include pad() {
-            content: url(/img/product/product-1550x550.jpg);
+            content: url(/img/index/04-1800X545.png);
             margin-bottom: -140px;
+            width: 80%;
+            margin-left: -10%;
         }
     }
 
     .pic-gray {
-     display: none;
+        display: none;
         background-color: rgb(238, 236, 235);
-       
 
-        @include pad{
+        @include pad {
             display: block;
             width: 100%;
             height: 225px;
@@ -697,13 +702,10 @@
         height: 85px;
         background-color: rgb(201, 184, 172);
         margin-top: -85px;
-        margin-right: 15%;
+        margin-left: 15%;
 
         z-index: 2;
         @include pad {
-            
         }
-
-        
     }
 }

@@ -1,3 +1,123 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑體;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a {
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+  text-decoration: unset;
+}
+
+a:visited {
+  color: unset;
+}
+
+:root h1 {
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+:root h2 {
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+:root h3 {
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+:root h4 {
+  font-weight: normal;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+:root h5 {
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+:root p {
+  font-size: 16px;
+  margin: 0%;
+}
+
+@media (min-width: 768px) {
+  :root h1 {
+    font-weight: bold;
+    font-size: 44px;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+  :root h2 {
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+  :root h3 {
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  :root h4 {
+    font-weight: normal;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  :root h5 {
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  :root p {
+    font-size: 18px;
+    margin: 0%;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 main {
   -webkit-transition: 1s;
   transition: 1s;
@@ -17,7 +137,7 @@ main .title {
   width: 510px;
   height: 140px;
   padding-top: 54px;
-  background-color: #fff;
+  background-color: #ffffff;
   text-align: center;
   position: absolute;
   top: 488px;
@@ -27,6 +147,7 @@ main .title {
 main .title h1 {
   letter-spacing: 5px;
   font-weight: 600;
+  color: #4d4d4d;
 }
 
 main .title h5 {
@@ -55,7 +176,7 @@ main .login-area .mytag {
 main .login-area .regi {
   text-align: right;
   width: 100%;
-  color: black;
+  color: #000000;
 }
 
 main .login-area .regi:hover {
@@ -81,7 +202,7 @@ main .login-area .button-area {
 
 main .login-area .button-area .mybtn {
   background-color: #c4817e;
-  color: white;
+  color: #ffffff;
   width: 230px;
   font-size: 24px;
   font-weight: 600;
@@ -101,7 +222,7 @@ main .login-area .button-area .mybtn:hover {
     width: 250px;
     height: 140px;
     padding-top: 25px;
-    background-color: white;
+    background-color: #ffffff;
     text-align: center;
     position: absolute;
     top: 260px;

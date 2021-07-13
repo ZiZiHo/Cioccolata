@@ -1,3 +1,123 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑體;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a {
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+  text-decoration: unset;
+}
+
+a:visited {
+  color: unset;
+}
+
+:root h1 {
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+:root h2 {
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+:root h3 {
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+:root h4 {
+  font-weight: normal;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+:root h5 {
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+:root p {
+  font-size: 16px;
+  margin: 0%;
+}
+
+@media (min-width: 768px) {
+  :root h1 {
+    font-weight: bold;
+    font-size: 44px;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+  :root h2 {
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+  :root h3 {
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  :root h4 {
+    font-weight: normal;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  :root h5 {
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  :root p {
+    font-size: 18px;
+    margin: 0%;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 main {
   width: 100%;
   position: relative;
@@ -16,7 +136,7 @@ main .title {
   width: 510px;
   height: 140px;
   padding-top: 54px;
-  background-color: #fff;
+  background-color: #ffffff;
   text-align: center;
   position: absolute;
   top: 488px;
@@ -26,6 +146,7 @@ main .title {
 main .title h1 {
   letter-spacing: 5px;
   font-weight: 600;
+  color: #4d4d4d;
 }
 
 main .title h5 {
@@ -48,25 +169,73 @@ main .content {
   margin: auto;
   margin-top: 80px;
   width: 58%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main .content h1 {
-  text-align: center;
+main .content .cocoa-title {
+  position: relative;
+}
+
+main .content .cocoa-title h2 {
+  width: 300px;
   letter-spacing: 5px;
+  position: absolute;
+  left: calc(100% - 150px);
 }
 
-main .content hr {
-  width: 230px;
+@media (max-width: 414px) {
+  main .content .cocoa-title h2 {
+    left: calc(100% - 120px);
+    top: -10px;
+  }
+}
+
+main .content .cocoa-title hr {
+  width: 200px;
   height: 1px;
   background-color: #bb916d;
-  position: relative;
-  top: -10px;
+  position: absolute;
+  left: -125px;
+  top: 36px;
 }
 
-main .content h4 {
+@media (max-width: 768px) {
+  main .content .cocoa-title hr {
+    width: 190px;
+    left: calc(100% - 130px);
+    top: 35px;
+  }
+}
+
+@media (max-width: 414px) {
+  main .content .cocoa-title hr {
+    width: 180px;
+    left: calc(100% - 100px);
+    top: 20px;
+  }
+}
+
+main .content p {
   margin: auto;
   margin-top: 100px;
   line-height: 60px;
+}
+
+@media (max-width: 414px) {
+  main .content p {
+    margin-top: 60px;
+    line-height: 50px;
+    width: 95%;
+  }
 }
 
 main .plant {
@@ -130,24 +299,38 @@ main .plant .method .method-content {
   position: relative;
 }
 
-main .plant .method .method-content .method-title h1 {
+main .plant .method .method-content .method-title h2 {
   letter-spacing: 5px;
   text-align: left;
 }
 
 main .plant .method .method-content .method-title hr {
-  width: 190px;
+  width: 160px;
   height: 1px;
   background-color: #bb916d;
   position: absolute;
-  top: 40px;
-  left: 30px;
+  top: 36px;
+  left: 26px;
 }
 
-main .plant .method .method-content h4 {
+@media (max-width: 768px) {
+  main .plant .method .method-content .method-title hr {
+    width: 150px;
+    top: 33px;
+    left: 26px;
+  }
+}
+
+main .plant .method .method-content p {
   margin: auto;
   margin-top: 50px;
   line-height: 60px;
+}
+
+@media (max-width: 414px) {
+  main .plant .method .method-content p {
+    line-height: 50px;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -235,9 +418,6 @@ main .plant .method .method-content h4 {
     width: 250px;
     height: 140px;
     padding-top: 25px;
-    background-color: white;
-    text-align: center;
-    position: absolute;
     top: 260px;
     left: calc(50% - 125px);
   }
@@ -281,8 +461,8 @@ main .plant .method .method-content h4 {
     width: 100%;
     height: 400px;
   }
-  main .plant .method {
-    width: 90%;
+  main .plant .method .method-content {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=chocolate.css.map */

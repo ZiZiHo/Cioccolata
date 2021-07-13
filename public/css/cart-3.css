@@ -37,7 +37,7 @@ a:visited {
 }
 
 :root h2 {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 28px;
   letter-spacing: 3px;
   margin: 0;
@@ -52,7 +52,7 @@ a:visited {
 
 :root h4 {
   font-weight: normal;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 2px;
   margin: 0;
 }
@@ -77,7 +77,7 @@ a:visited {
     margin: 0;
   }
   :root h2 {
-    font-weight: normal;
+    font-weight: bold;
     font-size: 36px;
     letter-spacing: 3px;
     margin: 0;
@@ -129,6 +129,8 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .banner {
@@ -177,7 +179,6 @@ main .title h5 {
 
 main .step-group {
   margin: auto;
-  width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,8 +241,9 @@ main .step-group .box .circle {
   }
 }
 
-main .step-group .box .c2 {
+main .step-group .box .c3 {
   background-color: #c4817e;
+  color: #ffffff;
 }
 
 main .step-group .box .txt {
@@ -249,44 +251,89 @@ main .step-group .box .txt {
   font-weight: 600;
 }
 
-main .step-group .box .t2 {
+main .step-group .box .t3 {
   color: #c4817e;
 }
 
 main hr {
   min-width: 100%;
-  border: 1px solid gray;
-  margin: 40px 0px;
+  border: 1px solid #4d4d4d;
+  margin: 30px 0px;
 }
 
-main .member-info,
+main .list {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .list .title-txt {
+  margin: 8px 0px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  main .list .title-txt {
+    display: none;
+  }
+}
+
+main .list .detail-txt {
+  margin: 10px 0px;
+  font-size: 24px;
+}
+
+main .amount {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .amount .detail-txt {
+  width: 120px;
+  margin: 5px 0px;
+  font-size: 24px;
+  text-align: right;
+}
+
+main .product-line {
+  width: 80%;
+  border: 1px dotted #c4817e;
+  opacity: 0.5;
+  margin: 8px 0px;
+}
+
 main .recive-info {
-  width: 800px;
   margin: auto;
 }
 
 @media (max-width: 768px) {
-  main .member-info,
   main .recive-info {
     width: 90%;
   }
 }
 
-main .member-info h3,
 main .recive-info h3 {
   padding-bottom: 30px;
   font-weight: 600;
 }
 
-main .member-info label,
 main .recive-info label {
   font-size: 24px;
-  line-height: 45px;
+  line-height: 32px;
   text-align: right;
 }
 
 @media (max-width: 768px) {
-  main .member-info label,
   main .recive-info label {
     font-size: 22px;
     line-height: 25px;
@@ -294,30 +341,12 @@ main .recive-info label {
   }
 }
 
-main .member-info input,
-main .member-info select,
-main .recive-info input,
-main .recive-info select {
-  height: 45px;
-}
-
-main .member-info input[type="radio"],
-main .recive-info input[type="radio"] {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-  position: relative;
-  top: 5px;
-}
-
-main .member-info .txt,
 main .recive-info .txt {
   font-size: 24px;
-  position: relative;
-  top: -8px;
+  line-height: 32px;
 }
 
 @media (max-width: 768px) {
-  main .member-info .txt,
   main .recive-info .txt {
     font-size: 22px;
   }
@@ -327,10 +356,9 @@ main .shipment,
 main .payment,
 main .invoice,
 main .message {
-  width: 800px;
   margin: auto;
-  font-size: 26px;
-  line-height: 50px;
+  font-size: 24px;
+  line-height: 38px;
 }
 
 @media (max-width: 768px) {
@@ -343,11 +371,12 @@ main .message {
   }
 }
 
-main .shipment .tag,
-main .payment .tag,
-main .invoice .tag,
-main .message .tag {
+main .shipment .mytag,
+main .payment .mytag,
+main .invoice .mytag,
+main .message .mytag {
   font-weight: 600;
+  text-align: right;
 }
 
 main .shipment input[type="radio"],
@@ -386,7 +415,6 @@ main .message textarea {
 }
 
 main .button-area {
-  width: 100%;
   margin-top: 50px;
   margin-bottom: 100px;
   display: -webkit-box;
@@ -417,7 +445,7 @@ main .button-area {
 
 main .button-area .mybtn {
   background-color: #c4817e;
-  color: white;
+  color: #ffffff;
   width: 230px;
   font-size: 24px;
   font-weight: 600;
@@ -437,4 +465,4 @@ main .button-area .back {
     margin-right: 0px;
   }
 }
-/*# sourceMappingURL=cart.css.map */
+/*# sourceMappingURL=cart-3.css.map */

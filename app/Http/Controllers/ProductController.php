@@ -58,8 +58,8 @@ class ProductController extends Controller
         if($request->hasfile('photo'))
         {
             File::delete(public_path().$request->photo);
-
-            $requestData['media'] = FileController::imageUpload($request->file('media') , $productTypeName);
+            
+            $requestData['photo'] = FileController::imageUpload($request->file('photo') , $productTypeName);
         }
         unset($requestData['_token']);
         // dd($requestData);

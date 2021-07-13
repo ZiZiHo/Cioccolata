@@ -1,76 +1,148 @@
 @import "_style_guide.scss";
 
-body {
-    margin: 0;
+@mixin news_1500px {
+    @media (min-width: 1500px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1205px) {
+        @content;
+    }
+}
+
+@mixin notebook {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 576px) {
+        @content;
+    }
 }
 
 .banner {
-    background-image: url(/img/product/product-banner-1920x575.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    // width: 100vw;
-    width: 100%;
-    height: 575px;
     position: relative;
-    margin-bottom: 135px;
+    img {
+        max-width: 100%;
+        min-height: 236px;
+        z-index: -1;
+
+        @include mobile {
+            content: url(/img/news/news-1920x575.jpg);
+        }
+    }
+    margin-bottom: 40px;
+
+    @include pad {
+        margin-bottom: 80px;
+    }
+
+    @include desktop {
+        margin-bottom: 100px;
+    }
+
+    @include news_1500px {
+        margin-bottom: 135px;
+    }
 
     .title {
-        width: 510px;
-        height: 145px;
+        width: 270px;
+        height: 100px;
         text-align: center;
         background-color: white;
 
         position: absolute;
         bottom: -50px;
-        left: calc(50% - 255px);
+        left: calc(50% - 135px);
+
+        @include pad {
+            width: 510px;
+            height: 145px;
+            bottom: -50px;
+            left: calc(50% - 255px);
+        }
         h1 {
-            margin-top: 47px;
+            margin-top: 20px;
             font-weight: bold;
-            letter-spacing: 10px;
-            color: $color-gray-2;
+            letter-spacing: 5px;
+            color: $fc-title;
+            @include pad {
+                margin-top: 47px;
+                letter-spacing: 10px;
+            }
         }
 
-        h6 {
-            margin-top: 28px;
+        h5 {
+            margin-top: 10px;
+            text-align: center;
+            color: $fc-title-en;
             letter-spacing: 5px;
-            color: $color-gray-3;
+
+            @include pad {
+                margin-top: 28px;
+                letter-spacing: 5px;
+            }
         }
     }
 }
 
 .section-1 {
-    margin-bottom: 190px;
+    margin-top: 80px;
+    margin-bottom: 65px;
+
+    @include pad {
+        margin-top: 140px;
+        margin-bottom: 190px;
+    }
     .container {
-        max-width: 1920px;
+        max-width: 100%;
         margin: auto;
         position: relative;
+
+        @include pad {
+            max-width: 95%;
+        }
+
         .news-area {
-            background-color: rgb(220, 207, 201);
-            padding: 120px 120px 25px;
+            background-color: $bgc-decorate;
+            padding-top: 35px;
+            padding-left: 55px;
+            padding-right: 55px;
+            padding-bottom: 30px;
+            // padding: 35px 55px;
+            position: relative;
+
+            @include notebook {
+                padding-top: 125px;
+                padding-left: 210px;
+                padding-bottom: 25px;
+                padding: 125px 60px 25px;
+            }
+
             .title {
                 margin-bottom: 100px;
                 letter-spacing: 5px;
                 h1 {
-                    font-size: 44px;
                     margin-bottom: 10px;
+
                     color: rgb(77, 77, 77);
-                    position: relative;
-                    &::after {
-                        position: absolute;
-                        bottom: -15px;
-                        left: 20px;
-                        content: "";
-                        width: 200px;
-                        height: 2px;
-                        background-color: $color-brown;
-                    }
                 }
                 h5 {
                     margin-bottom: 95px;
                     margin-left: 245px;
                     color: rgb(128, 128, 128);
                     position: relative;
+
                     &::after {
                         content: "";
                         width: 200px;
@@ -83,110 +155,169 @@ body {
                 }
             }
 
-            .news {
-                height: 210px;
-                margin-right: 50px;
-                margin-bottom: 50px;
+            .col-12 {
+                .second {
+                    @include news_1500px {
+                        margin-left: 145px;
+                    }
+                }
 
-                .pic {
-                    position: relative;
-                    width: 210px;
-                    height: 210px;
+                .news-group {
+                    justify-content: space-around;
+                    @include news_1500px {
+                        justify-content: start;
+                    }
+                }
+
+                .news {
+                    margin-bottom: 50px;
+                    margin-right: 0px;
+                    width: fit-content;
+                    @include pad {
+                        margin-right: 50px;
+                    }
+
                     .date {
-                        padding: 10px;
-                        width: 210px;
-                        height: 210px;
+                        min-width: 90px;
+                        height: 90px;
+
+                        @include pad {
+                            width: 210px;
+                            height: 210px;
+                        }
 
                         background-color: rgb(198, 162, 128);
                         position: relative;
+
                         .month {
-                            font-size: 68px;
+                            font-size: 30px;
                             font-weight: 100;
                             color: white;
-                            position: absolute;
-                            top: -3%;
-                            left: 10%;
+                            padding-left: 10px;
+
+                            @include pad {
+                                font-size: 68px;
+                                padding-left: 20px;
+                            }
                         }
                         .day {
-                            font-size: 68px;
+                            font-size: 30px;
                             font-weight: 100;
                             color: white;
                             text-align: right;
-                            position: absolute;
-                            bottom: 0%;
-                            right: 10%;
+                            padding-right: 10px;
+
+                            @include pad {
+                                font-size: 68px;
+                                padding-right: 20px;
+                            }
                         }
 
-                        .slash {
-                            font-size: 200px;
+                        .fa-slash {
+                            font-size: 50px;
                             font-weight: 100;
                             color: white;
-                            transform: rotate(20deg);
+                            transform: rotate(275deg);
                             position: absolute;
-                            top: -35%;
-                            left: 40%;
-                            z-index: 1;
+                            top: 22%;
+                            left: 15%;
+
+                            @include pad {
+                                font-size: 130px;
+                                top: 20%;
+                                left: 10%;
+                            }
+                        }
+                        &:hover {
+                            content: url("http://dummyimage.com/90x90/eb00eb/fff");
+
+                            @include pad {
+                                content: url("http://dummyimage.com/210x210/eb00eb/fff");
+                            }
                         }
                     }
-                    &:hover {
-                        opacity: 0;
-                    }
-                }
-                .photo {
-                    background-size: contain;
-                    width: 210px;
-                    height: 210px;
-                    background-repeat: no-repeat;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
 
-                    &:hover {
-                        opacity: 100;
-                        z-index: 2;
-                    }
-                }
+                    .text {
+                        position: relative;
+                        background-color: white;
+                        padding: 10px 20px 0 10px;
+                        border-radius: 0px 18px 18px 0;
 
-                .text {
-                    background-color: white;
-                    padding: 28px 43px 65px 30px;
-                    border-radius: 0px 20px 20px 0;
+                        width: 175px;
+                        @include mobile {
+                            width: 100%;
+                        }
 
-                    height: 210px;
-                    h3 {
-                        width: 340px;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                    }
-                    p {
-                        width: 340px;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        //行數限制
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                        white-space: normal;
-                    }
-                    .more {
-                        font-size: 20px;
-                        position: absolute;
-                        bottom: 22px;
-                        right: 10%;
+                        @include pad {
+                            padding: 28px 43px 65px 30px;
+                            width: 60%;
+                            border-radius: 0px 20px 20px 0;
+                        }
+
+                        h3 {
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 0px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+
+                            @include pad {
+                                font-size: 30px;
+                            }
+                        }
+                        p {
+                            font-size: 12px;
+                            letter-spacing: 0px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            //行數限制
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            white-space: normal;
+
+                            @include pad {
+                                font-size: 18px;
+                                -webkit-line-clamp: 3;
+                            }
+                        }
+                        .more {
+                            font-size: 14px;
+                            position: absolute;
+                            bottom: 10%;
+                            right: 10%;
+
+                            @include pad {
+                                font-size: 20px;
+                                bottom: 22px;
+                                left: 69%;
+                            }
+                        }
                     }
                 }
             }
+        }
 
-            .links {
-                padding-top: 85px;
-                .link {
+        .links {
+            margin-top: -25px;
+
+            @include pad {
+                margin-top: 85px;
+            }
+            .link {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $comp-link;
+
+                @include pad {
                     width: 25px;
                     height: 25px;
-                    border-radius: 50%;
-                    background-color: $color-gray-1;
+                }
+                &:hover {
+                    background-color: $comp-link-hover;
                 }
             }
         }
@@ -194,17 +325,29 @@ body {
 }
 
 .section-2 {
-    margin-bottom: 185px;
+    margin-bottom: 90px;
+
+    @include pad {
+        margin-bottom: 170px;
+    }
     .container {
-        max-width: 1340px;
+        max-width: 85%;
+
+        @include pad {
+            max-width: 1340px;
+        }
         .title {
-            margin-bottom: 175px;
+            margin-bottom: 45px;
             position: relative;
+
+            @include pad {
+                margin-bottom: 165px;
+            }
             &::after {
                 content: "";
                 width: 100%;
-                height: 3px;
-                background-color: $color-brown;
+                height: 1px;
+                background-color: $fc-line;
 
                 position: absolute;
                 bottom: -15px;
@@ -213,94 +356,285 @@ body {
         }
 
         .text {
+            margin-top: 40px;
+
+            @include pad {
+                padding-left: 30px;
+                padding-right: 20px;
+                margin-top: 0px;
+            }
+
+            @include notebook {
+                padding-left: 85px;
+                padding-right: 30px;
+            }
+
             h3 {
-                margin-bottom: 80px;
+                font-weight: bold;
+                margin-bottom: 30px;
                 position: relative;
+                text-align: center;
+
+                @include pad {
+                    margin-bottom: 80px;
+                    text-align: left;
+                }
+
                 &::after {
                     content: "";
-                    width: 105%;
-                    height: 3px;
-                    background-color: $color-brown;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $fc-line;
 
                     position: absolute;
-                    bottom: -30px;
-                    left: 0px;
+                    bottom: -10px;
+                    left: 0%;
+
+                    @include pad {
+                        width: 105%;
+                        bottom: -30px;
+                        left: 0px;
+                    }
                 }
             }
 
-            h6 {
-                line-height: 50px;
+            h5 {
+                line-height: 40px;
+            }
+
+            .link-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 30px;
+                margin: auto;
+                margin-top: 35px;
+                border-radius: 8px;
+                color: white;
+                background-color: $comp-link;
+                &:hover {
+                    background-color: $comp-link-hover;
+                }
+
+                @include pad {
+                    display: none;
+                }
             }
         }
     }
 }
 
 .section-3 {
-    background-color: $color-brown-1-honver;
-    padding: 60px 0 70px;
-    margin-bottom: 70px;
-    .container {
-        max-width: 1340px;
-        .text {
-            margin-top: 20px;
+    background-color: $bgc-white;
+    padding: 20px 0 70px;
+    margin-bottom: 30px;
 
-            h3 {
-                margin-bottom: 20px;
+    @include pad {
+        background-color: $bgc-decorate;
+        padding: 60px 0 70px;
+        margin-bottom: 70px;
+    }
+    .container {
+        max-width: 90%;
+
+        @include news_1500px {
+            max-width: 1340px;
+        }
+
+        .report {
+            border: 2px solid $comp-link;
+            padding: 0px 10px 20px;
+
+            @include pad {
+                border: none;
             }
-            h6 {
-                line-height: 50px;
+            .text {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    //行數限制
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    white-space: normal;
+                }
+                h5 {
+                    line-height: 40px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    //行數限制
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    white-space: normal;
+
+                    @include pad {
+                        line-height: 50px;
+                    }
+                }
+
+                .link-btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px 20%;
+                    // width: 150px;
+                    // height: 30px;
+                    margin: auto;
+                    margin-top: 35px;
+                    border-radius: 8px;
+                    color: white;
+                    background-color: $comp-link;
+                    &:hover {
+                        background-color: $comp-link-hover;
+                    }
+
+                    @include pad {
+                        display: none;
+                    }
+                }
             }
         }
     }
 }
 
 .pic-md {
-    margin-bottom: 95px;
+    margin-bottom: 40px;
+
+    @include pad {
+        margin-bottom: 95px;
+    }
 }
 
 .section-4 {
     .container {
-        max-width: 1680px;
+        max-width: 90%;
+
+        @include news_1500px {
+            max-width: 1680px;
+        }
         .title {
-            margin-bottom: 125px;
+            margin-bottom: 65px;
             position: relative;
+
+            @include pad{
+                margin-bottom: 75px;
+            }
+
+            @include notebook{
+                margin-bottom: 90px; 
+            }
+
+            @include desktop{
+                margin-bottom: 125px; 
+            }
+
             &::after {
                 content: "";
                 width: 100%;
-                height: 3px;
-                background-color: $color-brown;
+                height: 1px;
+                background-color: $fc-line;
 
                 position: absolute;
+
                 bottom: -15px;
                 left: 0px;
             }
         }
-        .activity{
-            margin-bottom: 225px;
+        .activity {
+            margin-bottom: 35px;
+            border: 1px solid black;
+            padding: 5px;
 
-    
+            @include pad{
+                border: none;
+                padding: 0px;
+                margin-bottom: 80px;
+            }
+
+            @include notebook{
+                margin-bottom: 100px;
+            }
+
+            @include desktop{
+                margin-bottom: 130px;
+            }
+
+            @include news_1500px{
+                margin-bottom: 225px;
+            }
+
             .text {
                 h3 {
-                    margin-bottom: 70px;
+                    margin-bottom: 10px;
                     position: relative;
+
+                    @include pad {
+                        margin-bottom: 20px;
+                    }
+
+                    @include notebook {
+                        margin-bottom: 30px;
+                    }
+
+                    @include desktop {
+                        margin-bottom: 40px;
+                    }
+
+                    @include news_1500px {
+                        margin-bottom: 50px;
+                    }
                     &::after {
                         content: "";
                         width: 100%;
-                        height: 3px;
-                        background-color: $color-brown;
-        
+                        height: 1px;
+                        background-color: $fc-line;
+
                         position: absolute;
-                        bottom: -15px;
+                        bottom: -8px;
                         left: 0px;
+
+                        @include pad {
+                            width: 60%;
+                            bottom: -10px;
+                            left: 0px;
+                           
+                        }
                     }
                 }
                 .bg-color {
                     width: 515px;
-                    background-color: $color-brown-1-honver;
-                    padding: 60px 30px;
-    
-                    h6 {
-                        line-height: 50px;
+                    background-color: $bgc-white;
+                    padding: 0px;
+
+                    @include pad {
+                        padding: 10px 10px;
+                        background-color: $bgc-decorate;
+                    }
+
+                    @include desktop {
+                        padding: 30px 10px;
+                    }
+
+                    @include news_1500px {
+                        padding: 60px 30px;
+                    }
+
+                    h5 {
+                        line-height: 30px;
+
+                        @include notebook {
+                            line-height: 50px;
+                        }
                     }
                 }
             }

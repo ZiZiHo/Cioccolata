@@ -64,6 +64,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $address = $data['county'].$data['district'].$data['zipcode'].$data['address'];
         // dd($data);
         return User::create([
             'name' => $data['name'],
@@ -71,8 +72,8 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'gender' => $data['gender'],
             'birthday' => $data['birthday'],
-            'phone' => $data['contact'],
-            'address' => $data['address']
+            'phone' => $data['phone'],
+            'address' => $address,
         ]);
     }
 }

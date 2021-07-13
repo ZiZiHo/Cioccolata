@@ -1,3 +1,5 @@
+@import "_style_guide.scss";
+
 main {
     transition: 1s;
     position: relative;
@@ -14,7 +16,7 @@ main {
         width: 510px;
         height: 140px;
         padding-top: 54px;
-        background-color: #fff;
+        background-color: $fc-white;
         text-align: center;
         position: absolute;
         top: 488px;
@@ -23,10 +25,11 @@ main {
         h1 {
             letter-spacing: 5px;
             font-weight: 600;
+            color:$fc-title;
         }
 
         h5 {
-            color: #808080;
+            color: $fc-title-en;
             letter-spacing: 3px;
         }
     }
@@ -51,11 +54,11 @@ main {
         .regi {
             text-align: right;
             width: 100%;
-            color: black;
+            color: $bdc-product-hover;
         }
 
         .regi:hover {
-            color: #955656;
+            color: $comp-product-cart-btn-hover;
         }
         a{
             text-decoration: none;
@@ -70,8 +73,8 @@ main {
             width: 100%;
 
             .mybtn {
-                background-color: #c4817e;
-                color: white;
+                background-color: $comp-product-cart-btn;
+                color: $fc-white;
                 width: 230px;
                 font-size: 24px;
                 font-weight: 600;
@@ -79,7 +82,7 @@ main {
             }
 
             .mybtn:hover {
-                background-color: #955656;
+                background-color: $comp-product-cart-btn-hover;
             }
         }
     }
@@ -95,7 +98,7 @@ main {
             width: 250px;
             height: 140px;
             padding-top: 25px;
-            background-color: rgb(255, 255, 255);
+            background-color: $fc-white;
             text-align: center;
             position: absolute;
             top: 260px;

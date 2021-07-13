@@ -20,11 +20,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- 通用區塊 nav -->
     <!-- Nav CSS -->
     <link rel="stylesheet" href="{{ asset('/css/nav.css') }}">
     <!-- Footer CSS -->
     <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
+
+    <!-- wow.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
     @yield('css')
 
@@ -37,19 +43,28 @@
 
     <nav>
         <ul class="main">
+            <li><a href="">首頁</a></li>
             <li><a href="{{ asset('/about') }}">關於我們</a></li>
             <li><a href="{{ asset('/knowledge') }}">認識巧克力</a></li>
             <li><a href="">最新消息</a></li>
             <li><a href="{{ asset('/diy') }}">瑪雅巧克力DIY</a></li>
             <li><a href="{{ asset('/product') }}">產品介紹</a></li>
             <li><a href="#contactus">聯絡我們</a></li>
-            <li><a href="#0"><i class="fal fa-shopping-cart"></i> 購物車</a></li>
-            <li><a href="#0"><i class="fal fa-user-alt"></i> 會員登入</a></li>
-            <li>
-                <i class="far fa-search" style="font-size:20px; color:white"></i>
-                <input id="search" type="search" name="search" value="" placeholder="SEARCH..." class="search"></input>
-            </li>
+            <li><a href="{{ asset('/shopping-car/1') }}"><i class="fal fa-shopping-cart"></i> 購物車</a></li>
+            @guest
+                <li><a href="{{ route('login') }}"><i class="fal fa-user-alt"></i> 會員登入</a></li>
+            @else
+                <li>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                        <i class="fal fa-user-alt"></i>會員登出
+                    </a>
 
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+            @endguest
         </ul>
 
 
@@ -57,57 +72,63 @@
 
     <div class="overlay"></div>
 
-    <main>
-        @yield('main')
-    </main>
+    @if (Session::has('message'))
+        <div class="alert alert-sucess d-flex " role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @endif
+    @yield('main')
+
 
     <footer id="contactus">
 
-        <div class="footer-box">
+        <div class="footer-box wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
 
             <!-- 左邊logo+聯絡資訊 -->
             <div class="box-left">
 
                 <div class="up">
-                    <div class="logo"></div>
+                    <div class="logo wow zoomIn" data-wow-delay="1s" data-wow-duration="1s"></div>
 
-                    <div class="info">
+                    <div class="info wow zoomIn" data-wow-delay="1.5s" data-wow-duration="1s">
                         <div class="social">
                             <a href="https://www.facebook.com/chomeet2014" target="blank"><i
                                     class="fab fa-facebook"></i></a>
+
+
                             <a href="https://www.instagram.com/chomeet_chocolate" target="blank"><i
                                     class="fab fa-instagram"></i></a>
+
                             <a href="https://line.me/ti/p/@qtw2002b" target="blank"><i class="fab fa-line"></i></a>
+
                             <a href="https://www.messenger.com/t/473915609339209/" target="blank"><i
                                     class="fab fa-facebook-messenger"></i></a>
+
+                            <a href="tel:+886-2-928922242"><i class="fas fa-phone-square"></i></a>
                         </div>
                         <div class="text">
                             營業時間：<br>
                             週一至週五 14:00 ~ 17:00<br>
                             週六至週日 10:30 ~ 18:00<br>
                             聯絡電話：0928 922 242<br>
-                            地址：台中市中區市府路137號1樓<br>
-                            電子信箱：chomeet2014@gmail.com
+                            台中市中區市府路137號1F<br>
+                            chomeet2014@gmail.com
                         </div>
                     </div>
 
                 </div>
 
                 <div class="down">
-
-                    <div class="contact">
-                        <!-- Button trigger modal -->
-                        <button class="mymodal" data-toggle="modal" data-target="#exampleModal">
-                            <i class="fal fa-envelope"></i>
-                            <span>聯絡我們</span>
-                        </button>
-                    </div>
-
-                    <div class="copy">
+                    <!-- Button trigger modal -->
+                    <button class="mymodal contact wow bounceIn" data-wow-delay="1.8s" data-wow-duration="1s"
+                        data-toggle="modal" data-target="#exampleModal">
+                        <i class="fal fa-envelope"></i>
+                        <span>聯絡我們</span>
+                    </button>
+                    <div class="copy wow fadeInLeft" data-wow-delay="2s" data-wow-duration="1s">
                         <div class="copy-txt">
                             Copyright © 2021 巧遇農情. &nbsp; All rights reserved.
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -122,23 +143,23 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-
+                        {{-- 這裡要送資訊給後端 --}}
                         <div class="modal-body">
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="name">姓名</label>
-                                        <input type="text" class="form-control" id="name">
+                                        <input type="text" class="form-control" name="name" id="name">
                                     </div>
                                     <div class="form-group col-md-8">
                                         <label for="email">email</label>
-                                        <input type="text" class="form-control" id="email">
+                                        <input type="text" class="form-control" name="email" id="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="message">留言</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
-                                        placeholder="Hi~想告訴我們什麼呢？"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="content"
+                                        rows="4" placeholder="Hi~想告訴我們什麼呢？"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">送出留言</button>
                             </form>
@@ -149,7 +170,7 @@
             </div>
 
             <!-- 右邊地圖 -->
-            <div class="box-right">
+            <div class="box-right wow fadeInRightBig" data-wow-delay="1s" data-wow-duration="1s">
                 <div class="vrtical-line"></div>
                 <div class="map">
                     <iframe
@@ -166,14 +187,22 @@
 
     <!-- Bootstrap 4.6 JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="{{ asset('/js/nav.js') }}"></script>
+
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        // activate wow.js
+        new WOW().init();
+    </script>
 
     @yield('js')
 

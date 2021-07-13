@@ -1,3 +1,5 @@
+@import "_style_guide.scss";
+
 main {
     position: relative;
 
@@ -13,7 +15,7 @@ main {
         width: 510px;
         height: 140px;
         padding-top: 54px;
-        background-color: #fff;
+        background-color: $bgc-white;
         text-align: center;
         position: absolute;
         top: 488px;
@@ -22,10 +24,11 @@ main {
         h1 {
             letter-spacing: 5px;
             font-weight: 600;
+            color: $fc-title;
         }
 
         h5 {
-            color: #808080;
+            color: $fc-title-en;
             letter-spacing: 3px;
         }
     }
@@ -35,7 +38,6 @@ main {
         margin-top: 219px;
         padding-top: 107px;
         width: 66%;
-
         background-image: url(/img/diy-011267x756.jpg);
         background-position: center;
         background-size: cover;
@@ -43,26 +45,32 @@ main {
         flex-direction: column;
         justify-content: center;
 
-        h1 {
+        @media (max-width: 536px) {
+            margin-top: 100px;
+        }
+
+        h2 {
             text-align: center;
             letter-spacing: 5px;
-            color: white;
+            color: $fc-white;
+            margin-bottom: 30px;
         }
 
         hr {
+            margin: auto;
             width: 380px;
             height: 1px;
-            background-color: #bb916d;
+            background-color: $fc-line;
             position: relative;
-            top: -10px;
+            top: -15px;
         }
 
-        h4 {
+        p {
             margin: auto;
             width: 40%;
             margin-top: 0px;
             line-height: 60px;
-            color: white;
+            color: $fc-white;
             margin-bottom: 100px;
         }
     }
@@ -82,17 +90,26 @@ main {
             .class-title {
                 position: relative;
                 margin-bottom: 30px;
+
+                @media (max-width: 536px) {
+                    margin-top: -80px;
+                }
+
                 h2 {
                     letter-spacing: 3px;
-                    font-weight: 600;
                 }
                 hr {
                     width: 150px;
                     height: 1px;
-                    background-color: #bb916d;
+                    background-color: $fc-line;
                     position: absolute;
                     left: 20px;
-                    top: 26px;
+                    top: 36px;
+
+                    @media (max-width: 536px) {
+                        width: 120px;
+                        top: 26px;
+                    }
                 }
             }
 
@@ -101,7 +118,7 @@ main {
                 margin-top: 70px;
             }
 
-            h4 {
+            p {
                 margin: 0px;
                 padding: 0px;
                 line-height: 60px;
@@ -120,7 +137,7 @@ main {
                 top: 50px;
 
                 .cart {
-                    color: #bb916d;
+                    color: $comp-link;
                     margin-top: 50px;
                     font-size: 26px;
                     text-decoration: none;
@@ -129,21 +146,21 @@ main {
                 hr {
                     width: 165px;
                     height: 1px;
-                    background-color: #bb916d;
+                    background-color: $comp-link;
                     position: relative;
-                    left: -10px;
+                    left: -3px;
                     top: -12px;
                 }
             }
             .add-cart:hover {
-                background-color: #964915;
+                background-color: $comp-link-hover;
                 opacity: 0.6;
                 cursor: pointer;
                 .cart {
-                    color: white;
+                    color: $fc-white;
                 }
                 hr {
-                    background-color: white;
+                    background-color: $fc-white;
                 }
             }
         }
@@ -177,7 +194,7 @@ main {
     main {
         .history {
             width: 72%;
-            h4 {
+            p {
                 width: 60%;
             }
         }
@@ -186,7 +203,7 @@ main {
                 width: 80%;
                 float: unset;
                 margin: 150px 50px 0px 50px;
-                h4 {
+                p {
                     margin: 0px;
                     padding: 0px;
                     line-height: 50px;
@@ -212,7 +229,7 @@ main {
     main {
         .history {
             width: 80%;
-            h4 {
+            p {
                 width: 80%;
                 line-height: 55px;
             }
@@ -221,7 +238,7 @@ main {
             .content {
                 width: 80%;
                 margin: 150px 50px 0px 50px;
-                h4 {
+                p {
                     margin: 0px;
                     padding: 0px;
                     line-height: 50px;
@@ -245,7 +262,7 @@ main {
     main {
         .history {
             width: 100%;
-            h4 {
+            p {
                 width: 80%;
                 line-height: 55px;
             }
@@ -253,6 +270,7 @@ main {
         .diy {
             flex-direction: column;
             .photo-group {
+                margin-top: -60px;
                 .photo-1 {
                     width: 100%;
                     height: 700px;
@@ -273,14 +291,11 @@ main {
             height: 300px;
         }
         .title {
-            width: 250px;
+            width: 300px;
             height: 140px;
             padding-top: 25px;
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-            position: absolute;
             top: 260px;
-            left: calc(50% - 125px);
+            left: calc(50% - 150px);
             h1 {
                 letter-spacing: 2px;
             }
@@ -291,7 +306,7 @@ main {
                 letter-spacing: 1px;
             }
             hr {
-                width: 100%;
+                width: 80%;
             }
         }
 

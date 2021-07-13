@@ -27,7 +27,6 @@ a:visited {
 }
 
 
-
 :root {
     h1 {
         font-weight: bold;
@@ -37,7 +36,7 @@ a:visited {
     }
 
     h2 {
-        font-weight: normal;
+        font-weight: bold;
         font-size: 28px;
         letter-spacing: 3px;
         margin: 0;
@@ -52,7 +51,7 @@ a:visited {
 
     h4 {
         font-weight: normal;
-        font-size: 20px;
+        font-size: 22px;
         letter-spacing: 2px;
         margin: 0;
     }
@@ -82,7 +81,7 @@ a:visited {
         }
     
         h2 {
-            font-weight: normal;
+            font-weight: bold;
             font-size: 36px;
             letter-spacing: 3px;
             margin: 0;
@@ -147,6 +146,7 @@ $fc-nav: #ffffff;
 $fc-footer: #ffffff;
 $fc-slogan: #ffffff;
 $fc-link: #bb916d;
+$comp-link: #bb916d;
 $fc-line: #bb916d;
 $fc-white: #ffffff;
 
@@ -163,7 +163,7 @@ $comp-link-hover: #964915;
 // $color-gray-2: #4c4c4b;
 // $color-gray-3: #808080;
 // $color-brown: #c69c6d;
-// $color-white: #ffffff;
+$white: #ffffff;
 
 // $color-pink-hover: #f5e2d6;
 // $color-brown-1-honver: #e6d5bc;

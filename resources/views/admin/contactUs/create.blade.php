@@ -28,14 +28,6 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="title" class="col-md-3 col-form-label text-md-right">{{ __('主旨') }}</label>
-                                <div class="col-md-6">
-                                    <input id="title" type="text" class="form-control" name="title"
-                                        value="{{ old('title') }}" autocomplete="title" autofocus>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
                                 <label for="name" class="col-md-3 col-form-label text-md-right">{{ __('姓名') }}</label>
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control" name="name"
@@ -51,13 +43,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label for="phone" class="col-md-3 col-form-label text-md-right">{{ __('電話') }}</label>
-                                <div class="col-md-6">
-                                    <input id="phone" type="phone" class="form-control" name="phone"
-                                        value="{{ old('phone') }}" autocomplete="title" autofocus>
-                                </div>
-                            </div>
+                            
 
 
                             <div class="form-group row">

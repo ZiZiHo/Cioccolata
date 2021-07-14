@@ -13,7 +13,10 @@
 
 @section('main')
     <main>
-
+        <a href="{{ asset('/shopping-car/1') }}" class="cart">
+            <div class="quantity">{{ $count }}</div>
+            <i class="fal fa-shopping-cart"></i>
+        </a>
         <div class="banner">
             <img class="wow fadeIn" src="/img/product/product-375x150-banner.jpg" alt="" data-wow-delay="0s"
                 data-wow-duration="1s">
@@ -69,15 +72,15 @@
                                     {{ $type->product_type_name }}
                                 </option>
                             @else
-                            <option value="/product?type_id={{ $type->id }}">
-                                {{ $type->product_type_name }}
-                            </option>
+                                <option value="/product?type_id={{ $type->id }}">
+                                    {{ $type->product_type_name }}
+                                </option>
                             @endif
                         @endforeach
                         @if ($type_id < 3)
-                            <option value="/product" >全部商品</option>
+                            <option value="/product">全部商品</option>
                         @else
-                            <option value="/product" selected >全部商品</option>
+                            <option value="/product" selected>全部商品</option>
                         @endif
 
                     </select>
@@ -112,7 +115,8 @@
                                 <ul>
                                     <li> 內容 : {{ $record[0]->unit }}</li>
                                     <li> 重量 : {{ $record[0]->weight }}</li>
-                                    <li class="js-price" data-price="{{ $record[0]->price }}"> 價格 : ${{ $record[0]->price }}</li>
+                                    <li class="js-price" data-price="{{ $record[0]->price }}"> 價格 :
+                                        ${{ $record[0]->price }}</li>
                                     <li> 成分 : {{ $record[0]->ingredient }}</li>
                                     {{-- <li>禮盒尺寸：長 21 x 寬 18 x 高 5(cm)</li> --}}
                                 </ul>
@@ -126,14 +130,15 @@
                                     <!-- 減少按鈕 -->
                                     <button type="button" class="subBtn btn btn-sm minus-btn ">-</button>
                                     <!-- 數量 -->
-                                    <input name="quantity" class="qty-input" value="1" type="number" placeholder="1" id="number">
+                                    <input name="quantity" class="qty-input" value="1" type="number" placeholder="1"
+                                        id="number">
                                     <!-- 增加按鈕 -->
                                     <button type="button" class="addBtn btn btn-sm plus-btn">+</button>
                                 </div>
                                 <!-- 加入購物車 -->
                                 <div class="cart d-flex justify-content-center align-items-center col-5 col-md-4 col-lg-6">
-                                    <div  class=" d-flex justify-content-center align-items-center">
-                                        <button data-id = "{{ $record[0]->id }}" class="btn btn-lg add-btn">加入購物車</button>
+                                    <div class=" d-flex justify-content-center align-items-center">
+                                        <button data-id="{{ $record[0]->id }}" class="btn btn-lg add-btn">加入購物車</button>
                                         <i class="fas fa-shopping-cart p-0"></i>
 
                                     </div>
@@ -175,7 +180,8 @@
                                         {{ $record[$i]->name }}</h5>
                                     <!-- 產品價格 -->
                                     <p data-price="{{ $record[$i]->price }}" class="price col-12 d-flex justify-content-center
-                                                        justify-content-md-start js-price">NT$ {{ $record[$i]->price }}</p>
+                                                            justify-content-md-start js-price">NT$
+                                        {{ $record[$i]->price }}</p>
 
                                     <!-- 購物車按鈕 -->
                                     <div class="add-cart col-md-12">
@@ -183,13 +189,14 @@
                                             <!-- 減少按鈕 -->
                                             <button type="button" class="subBtn btn minus-btn">-</button>
                                             <!-- 數量 -->
-                                            <input name="quantity" type="number" value="1" class="form-control qty-input" placeholder="1" id="number">
+                                            <input name="quantity" type="number" value="1" class="form-control qty-input"
+                                                placeholder="1" id="number">
                                             <!-- 增加按鈕 -->
                                             <button type="button" class="addBtn btn plus-btn">+</button>
                                         </div>
                                         <!-- 加入購物車按鈕 -->
                                         <div href="" class="cart d-flex justify-content-md-center align-items-md-center">
-                                            <button data-id = "{{ $record[$i]->id }}" class="btn add-btn">加入購物車</button>
+                                            <button data-id="{{ $record[$i]->id }}" class="btn add-btn">加入購物車</button>
                                             <i class="fas fa-shopping-cart pr-2"></i>
 
                                         </div>

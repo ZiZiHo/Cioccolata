@@ -30,22 +30,24 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="row no-gutters news-group d-flex wow fadeInUp" data-wow-delay="1s"
-                            data-wow-duration="1s">
+                        <div class="row no-gutters news-group d-flex justify-content-center wow fadeInUp"
+                            data-wow-delay="1s" data-wow-duration="1s">
                             <!-- 最新消息，hover換圖在SCSS:231行，可取消 -->
-                            <div class="col-md-12 col-xl-5 news d-flex justify-content-xl-start justify-content-center">
+                            <div class="col-md-12 col-xl-5 news d-flex justify-content-xl-end justify-content-center">
                                 <!-- 日期 -->
                                 <div class="date">
                                     <div class="row no-gutters">
                                         <!-- 月 -->
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[0]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[0]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
-                                            <img src="/img/index/slash.png" alt="">
+                                            <img src="{{ asset('/img/index/slash.png') }}" alt="">
                                         </div>
                                         <!-- 日 -->
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[0]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[0]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -60,18 +62,20 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-12 col-xl-5 news d-flex  justify-content-xl-start justify-content-center">
+                            <div class="col-md-12 col-xl-5 news d-flex  justify-content-xl-end justify-content-center">
                                 <div class="date">
 
                                     <div class="row no-gutters">
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[1]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[1]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
                                             <img src="/img/index/slash.png" alt="">
                                         </div>
 
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[1]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[1]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -91,17 +95,19 @@
 
                         <div class="row no-gutters second news-group d-flex wow fadeInUp" data-wow-delay="1s"
                             data-wow-duration="1s">
-                            <div class="col-md-12 col-xl-5 news d-flex justify-content-xl-start justify-content-center">
+                            <div class="col-md-12 col-xl-5 news d-flex justify-content-xl-end justify-content-center">
                                 <div class="date">
                                     <div class="row no-gutters">
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[2]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[2]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
                                             <img src="/img/index/slash.png" alt="">
                                         </div>
 
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -115,16 +121,18 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-12 col-xl-5 news d-flex justify-content-xl-start justify-content-center">
+                            <div class="col-md-12 col-xl-5 news d-flex justify-content-xl-end justify-content-center">
                                 <div class="date">
                                     <div class="row no-gutters">
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[3]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[3]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
                                             <img src="/img/index/slash.png" alt="">
                                         </div>
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -144,22 +152,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 d-flex justify-content-center links wow headShake" data-wow-delay="1s"
-                        data-wow-duration="1s">
-                        <a href="">
-                            <div class="link">
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="link mx-md-5 mx-3">
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="link">
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -174,8 +166,9 @@
                     </div>
                     <div class="col-md-7">
                         <!-- 最新消息圖片影片 -->
-                        <div class="pic wow fadeInUp " align="center" data-wow-delay="1s" data-wow-duration="1s">
-                            <img src="{{ $interview[0]->media }}" alt=""  style=" height: auto; max-width:100% ">
+                        <div class="pic d-flex justify-content-center justify-content-md-end wow fadeInUp"
+                            data-wow-delay="1s" data-wow-duration="1s">
+                            <img src="{{ $interview[0]->media }}" alt="">
 
                             <!-- <iframe src="https://www.youtube.com/embed/0gSta0rSMPY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe> -->
 
@@ -207,9 +200,9 @@
                     <!-- 20210713 報導html修改 -->
                     <div class="row no-gutters report col-5 col-md-6 d-flex justify-content-center">
                         <!-- 圖片 -->
-                        <div class="pic col-12 d-flex justify-content-md-center wow bounceIn" data-wow-delay="1s"
-                            data-wow-duration="1s" align="center">
-                            <img src="{{ $interview[1]->media }}" alt="" style=" height: auto; max-width:100% ">
+                        <div class="pic d-flex justify-content-md-center wow bounceIn" data-wow-delay="1s"
+                            data-wow-duration="1s">
+                            <img src="{{ $interview[1]->media }}" alt="" >
                         </div>
                         <div class="text col-xl-8 d-flex flex-column justify-content-center align-items-center wow bounceIn"
                             data-wow-delay="1s" data-wow-duration="1s">
@@ -218,7 +211,8 @@
                             <!-- 內容 -->
                             <h5>{{ $interview[1]->summary }}</h5>
                             <!-- 電腦版外部連結 -->
-                            <a href="{{ $interview[1]->readmore }}" class="more col-12 d-md-flex justify-content-end d-none">
+                            <a href="{{ $interview[1]->readmore }}"
+                                class="more col-12 d-md-flex justify-content-end d-none">
                                 <p>more</p>
                             </a>
                             <!--  手機版外部連結 -->
@@ -228,7 +222,7 @@
                     <!-- 20210713 報導html修改 -->
                     <div class="row no-gutters report col-5 col-md-6 d-flex justify-content-center">
                         <div class="pic d-flex justify-content-md-center wow bounceIn" data-wow-delay="1s"
-                            data-wow-duration="1s" align="center">
+                            data-wow-duration="1s">
                             <img src="{{ $interview[2]->media }}" alt="" style=" height: auto; max-width:100% ">
                         </div>
                         <div class="text col-xl-8 d-flex flex-column justify-content-center align-items-center wow bounceIn"
@@ -239,7 +233,8 @@
                             <h5>{{ $interview[2]->summary }}
                             </h5>
                             <!-- 電腦版外部連結 -->
-                            <a href="{{ $interview[2]->readmore }}" class="more col-12 d-md-flex justify-content-end d-none">
+                            <a href="{{ $interview[2]->readmore }}"
+                                class="more col-12 d-md-flex justify-content-end d-none">
                                 <p>more</p>
                             </a>
                             <!--  手機版外部連結 -->
@@ -265,10 +260,11 @@
 
                     <div class="row no-gutters col-12 activity d-flex align-items-center justify-content-center">
 
-                        <div class="col-6 col-lg-5">
+                        <div class="col-6 col-lg-6">
                             <!-- 活動圖片 -->
-                            <div class="pic mr-md-2 wow fadeInLeft" align="center" data-wow-delay="1s" data-wow-duration="1s">
-                                <img src="{{ $event[0]->media }}" alt="" style=" height: auto; max-width:100% ">
+                            <div class="pic d-flex justify-content-center align-items-center mr-md-2 wow fadeInLeft"
+                                data-wow-delay="1s" data-wow-duration="1s">
+                                <img src="{{ $event[0]->media }}" alt="">
                             </div>
                         </div>
                         <!-- 20210713 修改html -->
@@ -290,10 +286,11 @@
 
 
                     <div class="row no-gutters col-12 activity d-flex align-items-center justify-content-center">
-                        <div class="col-6 col-lg-5">
+                        <div class="col-6 col-lg-6">
                             <!-- 活動圖片 -->
-                            <div class="pic mr-md-2 wow fadeInLeft" align="center" data-wow-delay="1s" data-wow-duration="1s">
-                                <img src="{{ $event[1]->media }}" alt="" style=" height: auto; max-width:100% ">
+                            <div class="pic d-flex justify-content-center align-items-center mr-md-2 wow fadeInLeft"
+                                data-wow-delay="1s" data-wow-duration="1s">
+                                <img src="{{ $event[1]->media }}" alt="" >
                             </div>
                         </div>
                         <!-- 20210713 修改html -->

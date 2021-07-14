@@ -176,8 +176,67 @@ main .title h5 {
   margin-top: 10px;
 }
 
-main .regi-area {
+main .link-group {
   padding-top: 150px;
+  width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .link-group h4 {
+  font-weight: 600;
+}
+
+main .link-group a, main .link-group .login {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #c4817e;
+  color: #c4817e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+main .link-group a:hover {
+  background-color: #955656;
+  color: #ffffff;
+}
+
+main .link-group .edit {
+  width: 200px;
+  height: 50px;
+  background-color: #c4817e;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+main .regi-area {
+  padding-top: 80px;
   width: 800px;
   margin: auto;
 }

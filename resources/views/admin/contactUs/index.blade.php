@@ -24,9 +24,7 @@
                 <tr>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->email }}</td>
-                    <td>{{ $item->title }}</td>
                     <td>{{ $item->content }}</td>
-                    <td>{{ $item->phone }}</td>
                     <td>
                         <a type="button" href="{{ asset('/admin/contactus/edit') }}/{{ $item->id }}"
                             class="btn btn-sm btn-primary">編輯</a>

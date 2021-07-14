@@ -27,13 +27,7 @@
                         <form method="POST" action="{{ asset('admin/contactus/update') }}/{{ $record->id }}" enctype="multipart/form-data">
                             @csrf
 
-                            <div class="form-group row">
-                                <label for="title" class="col-md-3 col-form-label text-md-right">{{ __('主旨') }}</label>
-                                <div class="col-md-6">
-                                    <input id="title" type="text" class="form-control" name="title"
-                                        value="{{$record->title}}" readonly autocomplete="title" autofocus>
-                                </div>
-                            </div>
+
 
                             <div class="form-group row">
                                 <label for="name" class="col-md-3 col-form-label text-md-right">{{ __('姓名') }}</label>
@@ -51,13 +45,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label for="phone" class="col-md-3 col-form-label text-md-right">{{ __('電話') }}</label>
-                                <div class="col-md-6">
-                                    <input id="phone" type="phone" class="form-control" name="phone"
-                                        value="{{ $record->phone }}" readonly >
-                                </div>
-                            </div>
+                           
 
 
                             <div class="form-group row">

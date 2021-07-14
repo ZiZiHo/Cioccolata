@@ -54,9 +54,11 @@
             @guest
                 <li><a href="{{ route('login') }}"><i class="fal fa-user-alt"></i> 會員登入</a></li>
             @else
+                <li><a href="{{ asset('/member') }}"><i class="fal fa-user-alt"></i>會員專頁</a></li>
                 <li>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                          document.getElementById('logout-form').submit();">
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                         <i class="fal fa-user-alt"></i>會員登出
                     </a>
 
@@ -70,7 +72,11 @@
 
     </nav>
 
-    <div class="overlay"></div>
+    <div class="overlay">
+
+    </div>
+
+
 
     @if (Session::has('message'))
         <div class="alert alert-sucess d-flex " role="alert">
@@ -96,7 +102,8 @@
                                     class="fab fa-facebook"></i></a>
 
 
-                            <a href="https://www.instagram.com/chomeet_chocolate" target="blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/chomeet_chocolate" target="blank"><i
+                                    class="fab fa-instagram"></i></a>
 
                             <a href="https://line.me/ti/p/@qtw2002b" target="blank"><i class="fab fa-line"></i></a>
 
@@ -117,12 +124,13 @@
 
                 </div>
 
-                <div class="down">
-                        <!-- Button trigger modal -->
-                        <button class="mymodal contact wow bounceIn" data-wow-delay="1.8s" data-wow-duration="1s"  data-toggle="modal" data-target="#exampleModal">
-                            <i class="fal fa-envelope"></i>
-                            <span>聯絡我們</span>
-                        </button>
+                <div class="down" id="contactus">
+                    <!-- Button trigger modal -->
+                    <button class="mymodal contact wow bounceIn" data-wow-delay="1.8s" data-wow-duration="1s"
+                        data-toggle="modal" data-target="#exampleModal">
+                        <i class="fal fa-envelope"></i>
+                        <span>聯絡我們</span>
+                    </button>
                     <div class="copy wow fadeInLeft" data-wow-delay="2s" data-wow-duration="1s">
                         <div class="copy-txt">
                             Copyright © 2021 巧遇農情. &nbsp; All rights reserved.
@@ -143,21 +151,23 @@
                         </div>
 
                         <div class="modal-body">
-                            <form>
+                            <form method="POST" action="{{ asset('/contactus/store') }}"
+                                enctype="multipart/form-data">
+                                @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="name">姓名</label>
-                                        <input type="text" class="form-control" id="name">
+                                        <input name="name" type="text" class="form-control" id="name">
                                     </div>
                                     <div class="form-group col-md-8">
                                         <label for="email">email</label>
-                                        <input type="text" class="form-control" id="email">
+                                        <input name="email" type="text" class="form-control" id="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="message">留言</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
-                                        placeholder="Hi~想告訴我們什麼呢？"></textarea>
+                                    <textarea name="content" class="form-control" id="exampleFormControlTextarea1"
+                                        rows="4" placeholder="Hi~想告訴我們什麼呢？"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">送出留言</button>
                             </form>

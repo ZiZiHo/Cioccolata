@@ -17,9 +17,7 @@ class CreateContactUsTable extends Migration
             $table->id();
             $table->string('email')->comment('聯繫者信箱');
             $table->string('name')->comment('聯繫者姓名');
-            $table->string('title')->comment('聯繫者主旨');
             $table->string('content')->comment('聯繫者內容');
-            $table->string('phone')->comment('聯繫者手機');
             $table->timestamps();
         });
     }

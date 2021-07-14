@@ -126,7 +126,7 @@
                 padding-top: 125px;
                 padding-left: 210px;
                 padding-bottom: 25px;
-                padding: 125px 60px 25px;
+                padding: 100px 60px 125px;
             }
 
             .title {
@@ -156,11 +156,11 @@
             }
 
             .col-12 {
-                .second {
-                    @include news_1500px {
-                        margin-left: 145px;
-                    }
-                }
+                // .second {
+                //     @include news_1500px {
+                //         margin-left: 300px;
+                //     }
+                // }
 
                 .news-group {
                     justify-content: space-around;
@@ -236,6 +236,7 @@
                             }
                         }
 
+                       
                     }
 
                     .text {
@@ -357,35 +358,37 @@
             }
         }
 
-        // .pic {
-        //     position: relative;
-        //     width: 100%;
-        //     height: 300px;
+        .pic {
 
-        //     @include mobile {
-        //         height: 400px;
-        //     }
+            img{
 
-        //     @include pad {
-        //         height: 450px;
-        //     }
+                width: 300px;
+                height: auto;
 
-        //     @include notebook {
-        //         height: 500px;
-        //     }
+                @include mobile {
+                    width: 400px;
+                }
 
-        //     @include desktop {
-        //         height: 600px;
-        //     }
+                @include pad {
+                    width: 450px;
+                }
 
-        //     iframe {
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 100%;
-        //         height: 100%;
-        //     }
-        // }
+                @include notebook {
+                    width: 500px;
+                }
+
+                @include desktop {
+                    width: 650px;
+
+                }
+
+                @include news_1500px(){
+                    width: 800px;
+
+                }
+            }
+        }
+
 
         .text {
             margin-top: 40px;
@@ -485,12 +488,47 @@
             @include pad {
                 border: none;
             }
+
+            .pic{
+
+                    width: 100px;
+                    height: 100px;
+
+
+
+                    @include mobile{
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    @include pad{
+                        width: 300px;
+                        height: 400px;
+                    }
+
+                    @include notebook{
+                        width: 400px;
+                        height: 500px;
+                    }
+
+                    @include desktop{
+                        width: 500px;
+                        height: 500px;
+                    }
+
+                    img{
+                        max-width: 100%;
+                        height: auto;
+
+                    }
+            }
             .text {
                 margin-top: 20px;
                 display: flex;
                 flex-direction: column;
 
                 h3 {
+                    text-align: center;
                     font-weight: bold;
                     margin-bottom: 20px;
                     overflow: hidden;
@@ -503,6 +541,7 @@
                     white-space: normal;
                 }
                 h5 {
+                    text-align: center;
                     line-height: 30px;
                     overflow: hidden;
                     white-space: nowrap;
@@ -595,6 +634,44 @@
                 border: none;
                 padding: 0px;
                 margin-bottom: 30px;
+            }
+
+            .pic{
+
+                width: 210px;
+                height: 135px;
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                @include mobile{
+
+                    width: 210px;
+                    height: 135px;
+                }
+
+                @include pad{
+                    width: 350px;
+                    height: 300px;
+                }
+
+                @include notebook{
+                    width:400px;
+                    height:350px;
+                }
+
+                @include desktop{
+                    width:600px;
+                    height: 450px;
+                }
+
+                @include news_1500px(){
+                    width:750px;
+                    height: 530px;
+                }
+
             }
 
             .text {

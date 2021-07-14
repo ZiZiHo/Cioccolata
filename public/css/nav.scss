@@ -1,13 +1,19 @@
 @import "_style_guide.scss";
 
-
 // 原本import的直接貼進來，開始！
 
 // Vendor prefixes
 $sass-burger-add-vendor-prefixes: true !default;
 
 // Burger
-@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: $bdc-product-hover, $border-radius: 0, $transition-duration: 0.3s) {
+@mixin burger(
+  $width: 30px,
+  $height: 5px,
+  $gutter: 3px,
+  $color: $bdc-product-hover,
+  $border-radius: 0,
+  $transition-duration: 0.3s
+) {
   $burger-height: $height !global;
   $burger-gutter: $gutter !global;
 
@@ -211,21 +217,21 @@ body {
   //animation
   text-transform: uppercase;
   animation: animate 10s linear infinite;
-  @keyframes animate{
-    0%{
-      box-shadow: 0 0 0 0 rgba(84,62,51,.7), 0 0 0 0 rgba(84,62,51,.7)
+  @keyframes animate {
+    0% {
+      box-shadow: 0 0 0 0 rgba(84, 62, 51, 0.7), 0 0 0 0 rgba(84, 62, 51, 0.7);
     }
 
-    40%{
-      box-shadow: 0 0 0 50px rgba(84,62,51,0), 0 0 0 0 rgba(84,62,51,.7)
+    40% {
+      box-shadow: 0 0 0 50px rgba(84, 62, 51, 0), 0 0 0 0 rgba(84, 62, 51, 0.7);
     }
 
-    80%{
-      box-shadow: 0 0 0 50px rgba(84,62,51,0), 0 0 0 30px rgba(84,62,51,0)
+    80% {
+      box-shadow: 0 0 0 50px rgba(84, 62, 51, 0), 0 0 0 30px rgba(84, 62, 51, 0);
     }
 
-    100%{
-      box-shadow: 0 0 0 0 rgba(84,62,51,0), 0 0 0 30px rgba(84,62,51,0)
+    100% {
+      box-shadow: 0 0 0 0 rgba(84, 62, 51, 0), 0 0 0 30px rgba(84, 62, 51, 0);
     }
   }
 

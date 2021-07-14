@@ -12,6 +12,10 @@
 
 @section('main')
     <main>
+        <a href="{{ asset('/shopping-car/1') }}" class="cart">
+            <div class="quantity">{{ $count }}</div>
+            <i class="fal fa-shopping-cart"></i>
+        </a>
 
         <a href="#ankor-top">
             <div class="back-to-top">TOP</div>
@@ -211,14 +215,16 @@
                                 <div class="date" style="content:'{{ asset('$news[0]->media') }}' ">
                                     <div class="row no-gutters">
                                         <!-- 月 -->
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[0]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[0]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
                                             <img src="{{ asset('/img/index/slash.png') }}" alt="">
                                         </div>
                                         <!-- 日 -->
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[0]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[0]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -238,13 +244,15 @@
                             <div class="col-md-12 col-xl-5 news d-flex">
                                 <div class="date">
                                     <div class="row no-gutters">
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[1]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[1]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
                                             <img src="{{ asset('/img/index/slash.png') }}" alt="">
                                         </div>
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[1]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[1]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -271,14 +279,16 @@
                                 <div class="date">
                                     <div class="row no-gutters">
                                         <!-- 月 -->
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[2]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[2]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
                                             <img src="{{ asset('/img/index/slash.png') }}" alt="">
                                         </div>
                                         <!-- 日 -->
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -298,13 +308,15 @@
                             <div class="col-md-12 col-xl-5 news d-flex">
                                 <div class="date">
                                     <div class="row no-gutters">
-                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[3]->date)) }}</span>
+                                        <div class="col-12"><span
+                                                class="month">{{ date('m', strtotime($news[3]->date)) }}</span>
                                         </div>
                                         <!-- 20210713更改斜線樣式 -->
                                         <div class="slash">
                                             <img src="{{ asset('/img/index/slash.png') }}" alt="">
                                         </div>
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
+                                        <div class="col-12 d-flex justify-content-end"><span
+                                                class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -430,11 +442,13 @@
                                         <!-- 產品名稱 -->
                                         <h4 class="product_name col-lg-7">{{ $product[$i]->name }}</h4>
                                         <!-- 產品價格 -->
-                                        <p class="price col-lg-5 d-none d-lg-block">{{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
+                                        <p class="price col-lg-5 d-none d-lg-block">
+                                            {{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
                                         <!-- 產品內容 -->
                                         <p class="content col-md-12">{{ $product[$i]->ingredient }}</p>
                                         <!-- 產品價格 -->
-                                        <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">{{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
+                                        <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">
+                                            {{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
                                     </div>
                                 </div>
                             @endfor
@@ -465,7 +479,7 @@
         <div class="pics">
             <!-- 實驗圖片 -->
             <!-- <img class="wow slideInLeft" src="/img/index/test.jpg" alt=""
-                 data-wow-delay="1s" data-wow-duration="1s"> -->
+                     data-wow-delay="1s" data-wow-duration="1s"> -->
 
             <img class="wow slideInLeft" src="{{ asset('/img/index/phone-index-375x226.jpg') }}" alt=""
                 style="max-width: 100%; height: auto;" data-wow-delay="1s" data-wow-duration="1s">

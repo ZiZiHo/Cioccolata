@@ -23,6 +23,11 @@ Route::get('/about', 'FrontController@about');
 Route::get('/knowledge', 'FrontController@knowledge');
 Route::get('/diy', 'FrontController@diy');
 Route::get('/news', 'FrontController@news');
+Route::post('/contactus/store', 'FrontController@storeContactUs');
+
+Route::get('/member', 'FrontController@member');
+Route::get('/member/order', 'FrontController@memberOrder');
+Route::post('/member/editData', 'FrontController@memberEdit');
 
 Route::get('/product', 'FrontController@product');
 Route::post('/product/add', 'FrontController@add');

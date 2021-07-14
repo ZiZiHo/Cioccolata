@@ -35,6 +35,44 @@ main {
         }
     }
 
+    .link-group{
+        padding-top: 150px;
+        width: 800px;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+
+        .edit, .order-list,.logout{
+            width: 200px;
+            height: 50px;
+            border: 2px solid $comp-news-date;
+            color: $comp-news-date;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover{
+            background-color: $bgc-decorate;
+            color: $bgc-white;
+        }
+
+        .login{
+            width: 200px;
+            height: 50px;
+            background-color: $comp-news-date;
+            color: $bgc-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    }
+
     .login-area {
         padding-top: 100px;
         margin: 100px 0px;
@@ -52,23 +90,10 @@ main {
             margin: 10px 0px;
         }
 
-        .regi {
-            text-align: right;
-            width: 100%;
-            color: $bdc-product-hover;
-        }
-
-        .regi:hover {
-            color: $comp-product-cart-btn-hover;
-        }
-        a{
-            text-decoration: none;
-        }
-
+        
         .button-area {
             padding: 0;
             margin: 0;
-            margin-bottom: 100px;
             display: flex;
             justify-content: center;
             width: 100%;
@@ -85,6 +110,20 @@ main {
             .mybtn:hover {
                 background-color: $comp-product-cart-btn-hover;
             }
+        }
+
+        .regi {
+            text-align: right;
+            width: 100%;
+            color: $bdc-product-hover;
+            margin: 50px 0px;
+        }
+
+        .regi:hover {
+            color: $comp-product-cart-btn-hover;
+        }
+        a{
+            text-decoration: none;
         }
     }
 }

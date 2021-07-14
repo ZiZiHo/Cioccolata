@@ -74,14 +74,13 @@ main {
             margin: 0px 10px;
             text-decoration: none;
             border-radius: 5px;
-            
         }
         a:hover{
             background-color: $comp-product-cart-btn-hover;
             color: $bgc-white;
         }
 
-        .edit{
+        .order-list{
             width: 200px;
             height: 50px;
             background-color: $comp-product-cart-btn;
@@ -92,10 +91,13 @@ main {
             margin: 0px 10px;
             text-decoration: none;
             border-radius: 5px;
-            
         }
     }
 
+    tr{
+        height: 20px;
+    }
+    
     .regi-area {
         padding-top: 80px;
         width: 800px;

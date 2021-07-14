@@ -119,6 +119,53 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.cart {
+  width: 80px;
+  height: 80px;
+  background-color: #c4817e;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 4px 13px -4px #000000;
+  box-shadow: 3px 4px 13px -4px #000000;
+  z-index: 5;
+}
+
+.cart .quantity {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: -3px;
+  top: -12px;
+}
+
 .back-to-top {
   width: 50px;
   height: 50px;
@@ -986,6 +1033,16 @@ input::-webkit-inner-spin-button {
   .section-3 .container .news-area .col-md-12 .news .date .slash img {
     width: 150px;
     height: 150px;
+  }
+}
+
+.section-3 .container .news-area .col-md-12 .news .date:hover {
+  content: url("http://dummyimage.com/90x90/eb00eb/fff");
+}
+
+@media (min-width: 768px) {
+  .section-3 .container .news-area .col-md-12 .news .date:hover {
+    content: url("http://dummyimage.com/210x210/eb00eb/fff");
   }
 }
 

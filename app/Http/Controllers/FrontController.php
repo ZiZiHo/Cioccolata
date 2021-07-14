@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use App\User;
 use App\Order;
 use App\Product;
 use App\ContactUs;
-use App\News;
 use App\ProductType;
 use App\Order_detail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class FrontController extends Controller
 {
@@ -19,8 +21,9 @@ class FrontController extends Controller
     function index()
     {
         $product = Product::orderby('sort', 'desc')->get();
-        $news = News::orderby('date','desc')->get();
-        return view('front.index' , compact('product' , 'news') );
+        $news = News::orderby('date', 'desc')->get();
+        $count = \Cart::getContent()->count();
+        return view('front.index', compact('product', 'news' , 'count'));
     }
 
     function about()
@@ -40,16 +43,16 @@ class FrontController extends Controller
 
     function news()
     {
-        $news = News::orderby('date','desc')->get();
-        $interview = News::where('news_type_id' , '2')->orderby('date','desc')->get();
-        $event = News::where('news_type_id' , '3')->orderby('date','desc')->get();
-        return view('front.news.index' , compact('news' , 'interview' , 'event') );
+        $news = News::orderby('date', 'desc')->get();
+        $interview = News::where('news_type_id', '2')->orderby('date', 'desc')->get();
+        $event = News::where('news_type_id', '3')->orderby('date', 'desc')->get();
+        return view('front.news.index', compact('news', 'interview', 'event'));
     }
 
     function product(Request $request)
     {
         $type_id = $request->type_id;
-
+        $count = \Cart::getContent()->count();
         if ($type_id && $type_id < 4) {
             $record = Product::where('product_type_id', $type_id)->orderby('sort', 'desc')->get();
         } else {
@@ -60,7 +63,7 @@ class FrontController extends Controller
         // desc 大->小 預設小->大 = asc
         $productType = ProductType::get();
         // dd($record[0]);
-        return view('front.product.index', compact('record', 'productType', 'type_id'));
+        return view('front.product.index', compact('record', 'productType', 'type_id' , 'count'));
     }
 
     public function shoppingCarFirst()
@@ -87,10 +90,49 @@ class FrontController extends Controller
         $cartProducts = \Cart::getContent();
         return view('front.shopping-cart.cart-4', compact('cartProducts'));
     }
+
+    function member()
+    {
+        $data = User::where('id' , Auth::id())->get()->first();
+
+        return view('auth.edit' , compact('data'));
+    }
+
+    function memberOrder()
+    {
+        $userID = Auth::id();
+        $userEmail = User::where('id' , $userID)->get()->first()->email;
+
+        $record = Order::where('email',$userEmail )->get();
+
+        return view('auth.member-order-list' , compact('record'));
+    }
+
+    function memberEdit(Request $request)
+    {
+        // dd($request);
+        if($request->password == $request->password_confirmation)
+        {
+            User::where('email' , $request->email)
+            ->update([
+                'password' => Hash::make($request->password),
+                'name' => $request->name,
+                'gender' => $request->gender,
+                'birthday' => $request->birthday,
+                'phone' => $request->phone,
+                'address' => $request->address,
+            ]);
+        }
+
+        $data = User::where('id' , Auth::id())->get()->first();
+
+        return view('auth.edit' , compact('data'));
+    }
+
     public function add(Request $request)
     {
         $product = Product::find($request->productId);
-        // dd($product);
+
         \Cart::add(array(
             'id' => $product->id, // inique row ID
             'name' => $product->name,
@@ -103,7 +145,6 @@ class FrontController extends Controller
 
     public function update(Request $request)
     {
-        // dd(123);
         \Cart::update($request->productId, array(
             'quantity' => array(
                 'relative' => false,
@@ -152,10 +193,6 @@ class FrontController extends Controller
         $order['order_status_id'] = 0;
         $order['remark'] = $request->remark;
 
-
-
-
-        // dd($cartProducts);
         Session::put('order', $order);
         return redirect('/shopping-car/3');
     }
@@ -212,5 +249,12 @@ class FrontController extends Controller
         Session::flush();
         \Cart::clear();
         return redirect('/');
+    }
+
+    function storeContactUs(Request $request)
+    {
+        ContactUs::create($request->all());
+
+        return redirect('/')->with('message', '成功聯繫我們');
     }
 }

@@ -97,8 +97,6 @@
             <hr>
 
 
-            <hr>
-
             <!-- 按鈕 -->
             <div class="form-group row button-area">
                 <a href="/shopping-car/finish" type="submit" class="btn mybtn back">回到首頁</a>

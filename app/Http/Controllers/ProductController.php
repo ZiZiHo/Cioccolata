@@ -12,7 +12,7 @@ class ProductController extends Controller
     function index()
     {
         $record = Product::get();
-        dd('123');
+        // dd('123');
         // dd($record);
         return view('admin.product.index' , compact('record'));
     }

@@ -41,6 +41,11 @@
         <span></span>
     </div>
 
+    <a href="{{ asset('/shopping-car/1') }}" class="cart">
+        <div class="quantity">{{ $count }}</div>
+        <i class="fal fa-shopping-cart"></i>
+    </a>
+
     <nav>
         <ul class="main">
             <li><a href="/">首頁</a></li>

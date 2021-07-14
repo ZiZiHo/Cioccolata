@@ -534,23 +534,6 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.footer-box .modal-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer-box .modal-body .mybtn {
-  background-color: #c4817e;
-  color: #ffffff;
-}
-
 .footer-box .box-right {
   width: 45%;
   display: -webkit-box;

@@ -13,10 +13,7 @@
 
 @section('main')
     <main>
-        <a href="{{ asset('/shopping-car/1') }}" class="cart">
-            <div class="quantity">{{ $count }}</div>
-            <i class="fal fa-shopping-cart"></i>
-        </a>
+        
         <div class="banner">
             <img class="wow fadeIn" src="/img/product/product-375x150-banner.jpg" alt="" data-wow-delay="0s"
                 data-wow-duration="1s">

@@ -29,6 +29,8 @@
         @content;
     }
 }
+
+// 購物車
 .cart {
     width: 80px;
     height: 80px;
@@ -63,7 +65,7 @@
       top: -12px;
     }
   }
-  
+
 .banner {
     position: relative;
 
@@ -529,7 +531,7 @@
                             padding: 0 5px;
                             text-align: center;
                             background-color: white;
-
+                            
                             &::placeholder {
                                 color: black;
                                 opacity: 1;
@@ -720,7 +722,7 @@
     .pic-gray {
         display: none;
         background-color: rgb(238, 236, 235);
-
+        
         @include pad {
             display: block;
             width: 100%;

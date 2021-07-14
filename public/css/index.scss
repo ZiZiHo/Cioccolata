@@ -31,7 +31,6 @@
     }
 }
 
-
 // 購物車
 .cart {
     width: 80px;
@@ -68,7 +67,6 @@
     }
   }
 
-  
 .back-to-top{
     width: 50px;
     height: 50px;
@@ -118,7 +116,7 @@
                 @include notebook{
                     height: 900px;
                 }
-
+             
                 @include desktop {
                     height: 1080px;
                 }
@@ -241,7 +239,7 @@
         //768 出現
         .title {
             h1 {
-
+              
                 margin-bottom: 5px;
                 color: $fc-title;
             }
@@ -352,10 +350,10 @@
                 }
             }
             .link {
-
+              
                 color: $fc-link;
 
-                h4{
+                h4{         
                     padding: 15px;
                     position: relative;
                     &::after {
@@ -366,7 +364,7 @@
                         position: absolute;
                         right: 8px;
                         top: 85%;
-
+    
                         @include pad {
                             width: 147px;
                             right: 0px;
@@ -378,12 +376,12 @@
                         font-weight: bold;
                         background-color: $comp-link-hover;
                         opacity: 0.6;
-
-
+                        
+    
                         &::after {
                             background-color: white;
                             height: 2px;
-
+    
                             @include pad {
                                 height: 3px;
                             }
@@ -392,12 +390,12 @@
 
                     i {
                         font-size: 20px;
-
+    
                         @include pad {
                             font-size: 30px;
                         }
                     }
-
+    
                 }
 
             }
@@ -553,10 +551,10 @@
                     }
                 }
                 .link {
-
+              
                     color: $fc-link;
 
-                    h4{
+                    h4{         
                         padding: 15px;
                         position: relative;
                         &::after {
@@ -567,7 +565,7 @@
                             position: absolute;
                             right: 8px;
                             top: 85%;
-
+        
                             @include pad {
                                 width: 147px;
                                 right: 0px;
@@ -579,28 +577,28 @@
                             font-weight: bold;
                             background-color: $comp-link-hover;
                             opacity: 0.6;
-
-
+                            
+        
                             &::after {
                                 background-color: white;
                                 height: 2px;
-
+        
                                 @include pad {
                                     height: 3px;
                                 }
                             }
                         }
-
+    
                         i {
                             font-size: 20px;
-
+        
                             @include pad {
                                 font-size: 30px;
                             }
                         }
-
+        
                     }
-
+    
                 }
             }
 
@@ -807,7 +805,7 @@
                             top: 10%;
                             left: 10%;
                             transform: rotate(0deg);
-
+                           
                             @include pad {
                                 transform: rotate(-2deg);
                                 top: 15%;
@@ -840,7 +838,7 @@
                         border-radius: 0px 10px 10px 0;
                         width: 175px;
                         @include mobile{
-                            width: 100%;
+                            width: 100%;    
                         }
 
                         @include pad {
@@ -932,7 +930,7 @@
         }
 
         .link {
-
+           
             padding: 10px;
             text-align: center;
             margin-top: 25px;
@@ -1086,7 +1084,7 @@
 
                     .card-body {
                         padding-top: 28px;
-
+                       
                         .product_name {
                             margin-bottom: 0px;
                             font-weight: bold;
@@ -1192,7 +1190,7 @@
     .pic-gray {
         display: none;
         background-color: rgb(238, 236, 235);
-
+        
         @include pad {
             display: block;
             width: 100%;

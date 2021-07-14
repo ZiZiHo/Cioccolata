@@ -268,17 +268,6 @@
         }
     }
 
-    .modal-body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        .mybtn{
-            background-color:  $comp-product-cart-btn;
-            color: $fc-white;
-        }
-    }
-
     .box-right {
         width: 45%;
         display: flex;

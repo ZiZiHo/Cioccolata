@@ -188,10 +188,6 @@ main .link-group {
           justify-content: space-evenly;
 }
 
-main .link-group h4 {
-  font-weight: 600;
-}
-
 main .link-group a, main .link-group .login {
   width: 200px;
   height: 50px;
@@ -212,7 +208,7 @@ main .link-group a, main .link-group .login {
 }
 
 main .link-group a:hover {
-  background-color: #955656;
+  background-color: #d7c8bf;
   color: #ffffff;
 }
 

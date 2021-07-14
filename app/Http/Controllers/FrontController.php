@@ -6,6 +6,7 @@ use App\User;
 use App\Order;
 use App\Product;
 use App\ContactUs;
+use App\News;
 use App\ProductType;
 use App\Order_detail;
 use Illuminate\Http\Request;
@@ -17,8 +18,9 @@ class FrontController extends Controller
     //
     function index()
     {
-
-        return view('front.index');
+        $product = Product::orderby('sort', 'desc')->get();
+        $news = News::orderby('date','desc')->get();
+        return view('front.index' , compact('product' , 'news') );
     }
 
     function about()
@@ -34,6 +36,14 @@ class FrontController extends Controller
     function diy()
     {
         return view('front.diy.index');
+    }
+
+    function news()
+    {
+        $news = News::orderby('date','desc')->get();
+        $interview = News::where('news_type_id' , '2')->orderby('date','desc')->get();
+        $event = News::where('news_type_id' , '3')->orderby('date','desc')->get();
+        return view('front.news.index' , compact('news' , 'interview' , 'event') );
     }
 
     function product(Request $request)

@@ -175,6 +175,8 @@ main .title h1 {
 
 main .title h5 {
   color: #808080;
+  letter-spacing: 5px;
+  margin-top: 10px;
 }
 
 main .step-group {

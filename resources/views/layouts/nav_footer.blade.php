@@ -43,10 +43,10 @@
 
     <nav>
         <ul class="main">
-            <li><a href="">首頁</a></li>
+            <li><a href="/">首頁</a></li>
             <li><a href="{{ asset('/about') }}">關於我們</a></li>
             <li><a href="{{ asset('/knowledge') }}">認識巧克力</a></li>
-            <li><a href="">最新消息</a></li>
+            <li><a href="{{ asset('/news') }}">最新消息</a></li>
             <li><a href="{{ asset('/diy') }}">瑪雅巧克力DIY</a></li>
             <li><a href="{{ asset('/product') }}">產品介紹</a></li>
             <li><a href="#contactus">聯絡我們</a></li>
@@ -80,7 +80,7 @@
     @yield('main')
 
 
-    <footer id="contactus">
+    <footer>
 
         <div class="footer-box wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
 
@@ -96,8 +96,7 @@
                                     class="fab fa-facebook"></i></a>
 
 
-                            <a href="https://www.instagram.com/chomeet_chocolate" target="blank"><i
-                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/chomeet_chocolate" target="blank"><i class="fab fa-instagram"></i></a>
 
                             <a href="https://line.me/ti/p/@qtw2002b" target="blank"><i class="fab fa-line"></i></a>
 
@@ -119,12 +118,11 @@
                 </div>
 
                 <div class="down">
-                    <!-- Button trigger modal -->
-                    <button class="mymodal contact wow bounceIn" data-wow-delay="1.8s" data-wow-duration="1s"
-                        data-toggle="modal" data-target="#exampleModal">
-                        <i class="fal fa-envelope"></i>
-                        <span>聯絡我們</span>
-                    </button>
+                        <!-- Button trigger modal -->
+                        <button class="mymodal contact wow bounceIn" data-wow-delay="1.8s" data-wow-duration="1s"  data-toggle="modal" data-target="#exampleModal">
+                            <i class="fal fa-envelope"></i>
+                            <span>聯絡我們</span>
+                        </button>
                     <div class="copy wow fadeInLeft" data-wow-delay="2s" data-wow-duration="1s">
                         <div class="copy-txt">
                             Copyright © 2021 巧遇農情. &nbsp; All rights reserved.
@@ -143,23 +141,23 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        {{-- 這裡要送資訊給後端 --}}
+
                         <div class="modal-body">
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="name">姓名</label>
-                                        <input type="text" class="form-control" name="name" id="name">
+                                        <input type="text" class="form-control" id="name">
                                     </div>
                                     <div class="form-group col-md-8">
                                         <label for="email">email</label>
-                                        <input type="text" class="form-control" name="email" id="email">
+                                        <input type="text" class="form-control" id="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="message">留言</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="content"
-                                        rows="4" placeholder="Hi~想告訴我們什麼呢？"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                        placeholder="Hi~想告訴我們什麼呢？"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">送出留言</button>
                             </form>

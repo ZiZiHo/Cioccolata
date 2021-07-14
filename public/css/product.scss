@@ -30,12 +30,6 @@
     }
 }
 
-.type-click{
-    border-top: 3px solid #d0ae85;
-    border-right: 3px solid #d0ae85;
-    border-left: 3px solid #d0ae85;
-}
-
 .banner {
     position: relative;
 
@@ -135,8 +129,6 @@
                 height: 90px;
             }
 
-
-
             h3 {
                 line-height: 30px;
 
@@ -146,9 +138,11 @@
                 @include desktop {
                     line-height: 90px;
                 }
-
                 &:hover {
                     position: relative;
+                    border-top: 3px solid #d0ae85;
+                    border-right: 3px solid #d0ae85;
+                    border-left: 3px solid #d0ae85;
                     &::after {
                         content: "";
                         width: 60%;
@@ -255,7 +249,7 @@
             }
 
             @include product_1500px {
-                padding-left: 135px;
+                padding-left: 80px;
             }
             h2 {
                 font-size: 24px;
@@ -337,7 +331,7 @@
                     // z-index: -1;
 
                     .subBtn {
-                        padding-left: 30px;
+                        padding-left: 10px;
                         font-size: 20px;
                         color: white;
                         width: 70px;
@@ -353,17 +347,17 @@
                         width: 80%;
                         height: 45px;
                         text-align: center;
-                        background-color: $comp-product-qty-btn;
+                        background-color: white;
                         border: none;
 
                         &::placeholder {
-                            color: white;
+                            color: black;
                             opacity: 1;
                         }
                     }
 
                     .addBtn {
-                        padding-right: 30px;
+                        padding-right: 10px;
                         font-size: 20px;
                         color: white;
                         background-color: $comp-product-qty-btn;
@@ -405,7 +399,7 @@
     margin-bottom: 40px;
 
     @include pad {
-        margin-bottom: 190px;
+        margin-bottom: 0px;
     }
     .container {
         max-width: 80%;
@@ -416,6 +410,7 @@
         .card {
             border: none;
             width: fit-content;
+            margin-bottom: 80px;
 
             .card-img {
                 position: relative;
@@ -474,15 +469,15 @@
                     }
 
                     .qty {
-                        // width: 125px;
-                        // height: 30px;
+                        width: 120px;
+                        height: 30px;
                         background-color: $comp-product-qty-btn;
                         border-radius: 7px;
                         .subBtn {
                             width: 43px;
                             height: 30px;
                             line-height: 15px;
-                            padding-left: 30px;
+                            padding-left: 10px;
                             font-size: 14px;
                             color: white;
                             background-color: $comp-product-qty-btn;
@@ -494,13 +489,15 @@
                         }
                         #number {
                             width: 40px;
+                            // width: 20%;
                             font-size: 10px;
+                            height: 28px;
                             padding: 0 5px;
                             text-align: center;
-                            background-color: $comp-product-qty-btn;
-                            border: none;
+                            background-color: white;
+                            
                             &::placeholder {
-                                color: white;
+                                color: black;
                                 opacity: 1;
                             }
                         }
@@ -509,7 +506,7 @@
                             width: 43px;
                             height: 30px;
                             line-height: 15px;
-                            padding-right: 30px;
+                            padding-right: 10px;
                             font-size: 14px;
                             color: white;
                             background-color: $comp-product-qty-btn;
@@ -562,7 +559,7 @@
                             width: 50px;
                             height: 45px;
                             line-height: 15px;
-                            padding-left: 30px;
+                            padding-left: 10px;
                             font-size: 24px;
                             color: white;
                             background-color: $comp-product-qty-btn;
@@ -574,13 +571,13 @@
                         }
                         #number {
                             width: 160px;
-                            font-size: 20px;
+                            font-size: 18px;
                             padding: 0 5px;
                             text-align: center;
-                            background-color: $comp-product-qty-btn;
+                            background-color: white;
                             border: none;
                             &::placeholder {
-                                color: white;
+                                color: black;
                                 opacity: 1;
                             }
                         }
@@ -589,7 +586,7 @@
                             width: 50px;
                             height: 45px;
                             line-height: 15px;
-                            padding-right: 30px;
+                            padding-right: 15px;
                             font-size: 24px;
                             color: white;
                             background-color: $comp-product-qty-btn;
@@ -689,7 +686,7 @@
     .pic-gray {
         display: none;
         background-color: rgb(238, 236, 235);
-
+        
         @include pad {
             display: block;
             width: 100%;

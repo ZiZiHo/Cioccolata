@@ -35,4 +35,18 @@ class UserController extends Controller
         unset($requestData['zone']);
         dd($requestData);
     }
+
+    function edit()
+    {
+        dd(123);
+        return view('admin.user.create');
+    }
+    function delete($id)
+    {
+        $request = User::get()->find($id);
+
+        $request->delete();
+
+        return redirect('/admin/admin')->with('message','刪除成功');
+    }
 }

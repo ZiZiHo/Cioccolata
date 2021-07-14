@@ -31,7 +31,8 @@ main {
 
         h5 {
             color: $fc-title-en;
-            letter-spacing: 3px;
+            letter-spacing: 5px;
+            margin-top: 10px;
         }
     }
 
@@ -95,11 +96,11 @@ main {
         p {
             margin: auto;
             margin-top: 100px;
-            line-height: 60px;
+            line-height: 50px;
 
             @media (max-width: 414px) {
                 margin-top: 60px;
-                line-height: 50px;
+                line-height: 45px;
                 width: 95%;
             }
         }

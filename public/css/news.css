@@ -345,32 +345,32 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.section-1 .container .news-area .col-12 .news .date .fa-slash {
-  font-size: 50px;
-  font-weight: 100;
-  color: white;
-  -webkit-transform: rotate(275deg);
-          transform: rotate(275deg);
+.section-1 .container .news-area .col-12 .news .date .slash {
   position: absolute;
-  top: 22%;
-  left: 15%;
+  top: 10%;
+  left: 10%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 @media (min-width: 768px) {
-  .section-1 .container .news-area .col-12 .news .date .fa-slash {
-    font-size: 130px;
-    top: 20%;
-    left: 10%;
+  .section-1 .container .news-area .col-12 .news .date .slash {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    top: 15%;
+    left: 13%;
   }
 }
 
-.section-1 .container .news-area .col-12 .news .date:hover {
-  content: url("http://dummyimage.com/90x90/eb00eb/fff");
+.section-1 .container .news-area .col-12 .news .date .slash img {
+  width: 70px;
+  height: 70px;
 }
 
 @media (min-width: 768px) {
-  .section-1 .container .news-area .col-12 .news .date:hover {
-    content: url("http://dummyimage.com/210x210/eb00eb/fff");
+  .section-1 .container .news-area .col-12 .news .date .slash img {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -451,7 +451,8 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 768px) {
   .section-1 .container .links {
-    margin-top: 85px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -528,7 +529,7 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 992px) {
   .section-2 .container .text {
-    padding-left: 85px;
+    padding-left: 50px;
     padding-right: 30px;
   }
 }
@@ -542,7 +543,7 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 768px) {
   .section-2 .container .text h3 {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     text-align: left;
   }
 }
@@ -566,7 +567,11 @@ input::-webkit-inner-spin-button {
 }
 
 .section-2 .container .text h5 {
-  line-height: 40px;
+  line-height: 30px;
+}
+
+.section-2 .container .text a {
+  text-align: end;
 }
 
 .section-2 .container .text .link-btn {
@@ -657,7 +662,7 @@ input::-webkit-inner-spin-button {
 }
 
 .section-3 .container .report .text h5 {
-  line-height: 40px;
+  line-height: 30px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -669,7 +674,7 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 768px) {
   .section-3 .container .report .text h5 {
-    line-height: 50px;
+    line-height: 30px;
   }
 }
 
@@ -755,7 +760,7 @@ input::-webkit-inner-spin-button {
 }
 
 .section-4 .container .activity {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   border: 1px solid black;
   padding: 5px;
 }
@@ -764,25 +769,7 @@ input::-webkit-inner-spin-button {
   .section-4 .container .activity {
     border: none;
     padding: 0px;
-    margin-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .section-4 .container .activity {
-    margin-bottom: 100px;
-  }
-}
-
-@media (min-width: 1205px) {
-  .section-4 .container .activity {
-    margin-bottom: 130px;
-  }
-}
-
-@media (min-width: 1500px) {
-  .section-4 .container .activity {
-    margin-bottom: 225px;
+    margin-bottom: 30px;
   }
 }
 
@@ -793,25 +780,25 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 768px) {
   .section-4 .container .activity .text h3 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
 @media (min-width: 992px) {
   .section-4 .container .activity .text h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 
 @media (min-width: 1205px) {
   .section-4 .container .activity .text h3 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: 1500px) {
   .section-4 .container .activity .text h3 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -834,15 +821,12 @@ input::-webkit-inner-spin-button {
 }
 
 .section-4 .container .activity .text .bg-color {
-  width: 515px;
-  background-color: #ffffff;
   padding: 0px;
 }
 
 @media (min-width: 768px) {
   .section-4 .container .activity .text .bg-color {
     padding: 10px 10px;
-    background-color: #d7c8bf;
   }
 }
 
@@ -854,17 +838,17 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 1500px) {
   .section-4 .container .activity .text .bg-color {
-    padding: 60px 30px;
+    padding: 0px 0px;
   }
 }
 
 .section-4 .container .activity .text .bg-color h5 {
-  line-height: 30px;
+  line-height: 20px;
 }
 
 @media (min-width: 992px) {
   .section-4 .container .activity .text .bg-color h5 {
-    line-height: 50px;
+    line-height: 30px;
   }
 }
 /*# sourceMappingURL=news.css.map */

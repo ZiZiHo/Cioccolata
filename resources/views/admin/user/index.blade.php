@@ -4,10 +4,10 @@
     <script src="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"></script>
 @endsection
 
-@section('h1_title', '聯繫我們首頁')
+@section('h1_title', '會員資訊首頁')
 
 @section('main')
-    <a type="button" class="btn btn-sm btn-success m-2" href="{{ asset('/admin/user/create') }}">新增</a>
+    <a type="button" class="btn btn-sm btn-success m-2" href="{{ route('logout') }}">新增</a>
     <table id="example" class="display container" style="width:100%">
         <thead>
             <tr>
@@ -31,7 +31,7 @@
                     <td>{{ $item->address }}</td>
                     <td>
                         <a type="button" href="{{ asset('/admin/user/edit') }}/{{ $item->id }}"
-                            class="btn btn-sm btn-primary">編輯</a>
+                            class="btn btn-sm btn-primary">檢視訂單</a>
                         <form style="display:inline-block;"
                             action="{{ asset('/admin/user/delete') }}/{{ $item->id }}"
                             method="post">

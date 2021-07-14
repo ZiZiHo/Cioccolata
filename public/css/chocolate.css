@@ -151,7 +151,8 @@ main .title h1 {
 
 main .title h5 {
   color: #808080;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
+  margin-top: 10px;
 }
 
 main .cocoa {
@@ -227,13 +228,13 @@ main .content .cocoa-title hr {
 main .content p {
   margin: auto;
   margin-top: 100px;
-  line-height: 60px;
+  line-height: 50px;
 }
 
 @media (max-width: 414px) {
   main .content p {
     margin-top: 60px;
-    line-height: 50px;
+    line-height: 45px;
     width: 95%;
   }
 }

@@ -7,7 +7,7 @@
 @endsection
 
 @section('main')
-    <main>
+    <main class="flex-wrap">
         <div class="banner"></div>
         <div class="title">
             <h1>購物車</h1>

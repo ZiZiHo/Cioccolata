@@ -572,7 +572,7 @@ input::-webkit-inner-spin-button {
   height: 90%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  opacity: 0.65;
+  opacity: 0.85;
 }
 
 @media (max-width: 1300px) {

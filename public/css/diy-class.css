@@ -150,7 +150,8 @@ main .title h1 {
 
 main .title h5 {
   color: #808080;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
+  margin-top: 10px;
 }
 
 main .history {
@@ -199,7 +200,7 @@ main .history p {
   margin: auto;
   width: 40%;
   margin-top: 0px;
-  line-height: 60px;
+  line-height: 50px;
   color: #ffffff;
   margin-bottom: 100px;
 }
@@ -261,7 +262,7 @@ main .diy .content h3 {
 main .diy .content p {
   margin: 0px;
   padding: 0px;
-  line-height: 60px;
+  line-height: 50px;
 }
 
 main .diy .content .price {
@@ -273,7 +274,7 @@ main .diy .content .add-cart {
   height: 80px;
   padding: 12px 0px 0px 20px;
   position: relative;
-  left: 250px;
+  left: -14px;
   top: 50px;
 }
 

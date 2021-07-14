@@ -150,6 +150,8 @@ main .title h1 {
 
 main .title h5 {
   color: #808080;
+  letter-spacing: 5px;
+  margin-top: 10px;
 }
 
 main .brand {
@@ -258,6 +260,10 @@ main .tree-group .txt .title-group hr {
 main .tree-group .txt p {
   margin-top: 99px;
   line-height: 50px;
+}
+
+main .tree-group .txt .down-sec {
+  margin-top: 30px;
 }
 
 main .tree-group .tree {

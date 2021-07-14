@@ -28,6 +28,8 @@ main {
 
         h5 {
             color: $fc-title-en;
+            letter-spacing: 5px;
+            margin-top: 10px;
         }
     }
 
@@ -121,6 +123,9 @@ main {
             p {
                 margin-top: 99px;
                 line-height: 50px;
+            }
+            .down-sec{
+                margin-top: 30px;
             }
         }
         .tree {

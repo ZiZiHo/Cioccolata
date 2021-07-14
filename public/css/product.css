@@ -118,12 +118,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.type-click {
-  border-top: 3px solid #d0ae85;
-  border-right: 3px solid #d0ae85;
-  border-left: 3px solid #d0ae85;
-}
-
 .banner {
   position: relative;
   margin-bottom: 40px;
@@ -259,6 +253,9 @@ input::-webkit-inner-spin-button {
 
 .section-1 .types .type h3:hover {
   position: relative;
+  border-top: 3px solid #d0ae85;
+  border-right: 3px solid #d0ae85;
+  border-left: 3px solid #d0ae85;
 }
 
 .section-1 .types .type h3:hover::after {
@@ -386,7 +383,7 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 1500px) {
   .section-1 .container .text {
-    padding-left: 135px;
+    padding-left: 80px;
   }
 }
 
@@ -486,7 +483,7 @@ input::-webkit-inner-spin-button {
 }
 
 .section-1 .container .text .add-cart .qty .subBtn {
-  padding-left: 30px;
+  padding-left: 10px;
   font-size: 20px;
   color: white;
   width: 70px;
@@ -503,32 +500,32 @@ input::-webkit-inner-spin-button {
   width: 80%;
   height: 45px;
   text-align: center;
-  background-color: #b9afa7;
+  background-color: white;
   border: none;
 }
 
 .section-1 .container .text .add-cart .qty #number::-webkit-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-1 .container .text .add-cart .qty #number:-ms-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-1 .container .text .add-cart .qty #number::-ms-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-1 .container .text .add-cart .qty #number::placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-1 .container .text .add-cart .qty .addBtn {
-  padding-right: 30px;
+  padding-right: 10px;
   font-size: 20px;
   color: white;
   background-color: #b9afa7;
@@ -569,7 +566,7 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 768px) {
   .section-2 {
-    margin-bottom: 190px;
+    margin-bottom: 0px;
   }
 }
 
@@ -588,6 +585,7 @@ input::-webkit-inner-spin-button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-bottom: 80px;
 }
 
 .section-2 .container .card .card-img {
@@ -660,6 +658,8 @@ input::-webkit-inner-spin-button {
 }
 
 .section-2 .container .card .card-body .add-cart .qty {
+  width: 120px;
+  height: 30px;
   background-color: #b9afa7;
   border-radius: 7px;
 }
@@ -668,7 +668,7 @@ input::-webkit-inner-spin-button {
   width: 43px;
   height: 30px;
   line-height: 15px;
-  padding-left: 30px;
+  padding-left: 10px;
   font-size: 14px;
   color: white;
   background-color: #b9afa7;
@@ -682,29 +682,29 @@ input::-webkit-inner-spin-button {
 .section-2 .container .card .card-body .add-cart .qty #number {
   width: 40px;
   font-size: 10px;
+  height: 28px;
   padding: 0 5px;
   text-align: center;
-  background-color: #b9afa7;
-  border: none;
+  background-color: white;
 }
 
 .section-2 .container .card .card-body .add-cart .qty #number::-webkit-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-2 .container .card .card-body .add-cart .qty #number:-ms-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-2 .container .card .card-body .add-cart .qty #number::-ms-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-2 .container .card .card-body .add-cart .qty #number::placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
@@ -712,7 +712,7 @@ input::-webkit-inner-spin-button {
   width: 43px;
   height: 30px;
   line-height: 15px;
-  padding-right: 30px;
+  padding-right: 10px;
   font-size: 14px;
   color: white;
   background-color: #b9afa7;
@@ -782,7 +782,7 @@ input::-webkit-inner-spin-button {
   width: 50px;
   height: 45px;
   line-height: 15px;
-  padding-left: 30px;
+  padding-left: 10px;
   font-size: 24px;
   color: white;
   background-color: #b9afa7;
@@ -795,30 +795,30 @@ input::-webkit-inner-spin-button {
 
 .section-2 .container .card .card-body .add-cart-phone .qty #number {
   width: 160px;
-  font-size: 20px;
+  font-size: 18px;
   padding: 0 5px;
   text-align: center;
-  background-color: #b9afa7;
+  background-color: white;
   border: none;
 }
 
 .section-2 .container .card .card-body .add-cart-phone .qty #number::-webkit-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-2 .container .card .card-body .add-cart-phone .qty #number:-ms-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-2 .container .card .card-body .add-cart-phone .qty #number::-ms-input-placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
 .section-2 .container .card .card-body .add-cart-phone .qty #number::placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 
@@ -826,7 +826,7 @@ input::-webkit-inner-spin-button {
   width: 50px;
   height: 45px;
   line-height: 15px;
-  padding-right: 30px;
+  padding-right: 15px;
   font-size: 24px;
   color: white;
   background-color: #b9afa7;

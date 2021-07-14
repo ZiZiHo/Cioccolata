@@ -8,7 +8,7 @@
 
 
 @section('main')
-    <main class="flex-wrap">
+    <main>
         <div class="banner"></div>
         <div class="title">
             <h1>購物車</h1>
@@ -68,40 +68,12 @@
 
             <hr>
 
-            @php
-                $qty = 0;
-                $shipping = 0;
-                $total = 0;
-                foreach ($cartProducts as $key => $item) {
-                    $qty += $item->quantity;
-                    $total += $item->price;
-                }
-                $shipping = $total > 1000 ? 0 : 60;
-                $total = number_format($total);
-            @endphp
-
-            <!-- 金額統計 -->
-            <div class="row amount">
-                <div class="col-md-10 detail-txt">總數量</div>
-                <div class="col-md-2 detail-txt">{{ $qty }}</div>
-            </div>
-            <div class="row amount">
-                <div class="col-md-10 detail-txt">運費</div>
-                <div class="col-md-2 detail-txt">${{ $shipping }}</div>
-            </div>
-            <div class="row amount">
-                <div class="col-md-10 detail-txt">總金額</div>
-                <div class="col-md-2 detail-txt">${{ $total }}</div>
-            </div>
-
-            <hr>
 
 
-            <hr>
 
             <!-- 按鈕 -->
             <div class="form-group row button-area">
-                <a href="/shopping-car/finish" type="submit" class="btn mybtn back">回到首頁</a>
+                <a href="/admin/user" type="submit" class="btn mybtn back">回到前一頁</a>
             </div>
         </div>
     </main>

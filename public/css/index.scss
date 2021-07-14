@@ -80,7 +80,7 @@
                 @include notebook{
                     height: 900px;
                 }
-             
+
                 @include desktop {
                     height: 1080px;
                 }
@@ -95,39 +95,48 @@
         width: 100px;
         height: 100px;
         position: absolute;
-        top: 310px;
+        top: 180px;
         left: calc(50% - 50px);
         z-index: 1;
+
+        @include mobile{
+            top: 210px;
+        }
 
         @include pad{
             background-position: -15px 0px;
             width: 150px;
             height: 150px;
+            top: 200px;
             left: calc(50% - 75px);
         }
 
         @include desktop {
             width: 240px;
             height: 240px;
-            top: 312px;
+            top: 250px;
             left: calc(50% - 120px);
         }
     }
     .text {
         z-index: 1;
         position: absolute;
-        top: 415px;
+        top: 285px;
         // left: calc(50% - 250px);
         font-family: "Noto Serif TC", serif;
 
         @include mobile {
             // left: calc(50% - 300px);
-            top: 465px;
+            top: 320px;
         }
 
         @include pad {
             // left: calc(50% - 340px);
-            top: 580px;
+            top: 350px;
+        }
+
+        @include desktop{
+            top: 500px;
         }
 
         h1 {
@@ -159,14 +168,14 @@
             @include mobile {
                 font-size: 24px;
                 &:nth-child(2) {
-                    margin-bottom: 50px;
+                    margin-bottom: 40px;
                 }
             }
 
             @include pad {
                 font-size: 40px;
                 &:nth-child(2) {
-                    margin-bottom: 75px;
+                    margin-bottom: 50px;
                 }
             }
         }
@@ -194,7 +203,7 @@
         //768 出現
         .title {
             h1 {
-                // font-size: 44px;
+
                 margin-bottom: 5px;
                 color: $fc-title;
             }
@@ -305,59 +314,54 @@
                 }
             }
             .link {
-                // width: 120px;
-                // height: 35px;
-                // padding-bottom: 10px;
-                // padding-right: 20px;
 
-                padding: 10px;
-
-                position: relative;
                 color: $fc-link;
 
-                @include pad {
-                    width: 200px;
-                    height: 60px;
-                }
-
-                i {
-                    font-size: 20px;
-
-                    @include pad {
-                        font-size: 30px;
-                    }
-                }
-                &::after {
-                    content: "";
-                    width: 100px;
-                    height: 1px;
-                    background-color: $fc-line;
-                    position: absolute;
-                    right: 8px;
-                    top: 85%;
-
-                    @include pad {
-                        width: 147px;
-                        right: 0px;
-                        top: 50px;
-                    }
-                }
-
-                &:hover {
-                    color: white;
-                    font-weight: bold;
-                    background-color: $comp-link-hover;
-                    opacity: 0.6;
-
+                h4{
+                    padding: 15px;
+                    position: relative;
                     &::after {
-                        background-color: white;
-                        height: 2px;
+                        content: "";
+                        width: 100px;
+                        height: 1px;
+                        background-color: $fc-line;
+                        position: absolute;
+                        right: 8px;
+                        top: 85%;
 
                         @include pad {
-                            height: 3px;
+                            width: 147px;
+                            right: 0px;
+                            top: 50px;
                         }
                     }
+                    &:hover {
+                        color: white;
+                        font-weight: bold;
+                        background-color: $comp-link-hover;
+                        opacity: 0.6;
+
+
+                        &::after {
+                            background-color: white;
+                            height: 2px;
+
+                            @include pad {
+                                height: 3px;
+                            }
+                        }
+                    }
+
+                    i {
+                        font-size: 20px;
+
+                        @include pad {
+                            font-size: 30px;
+                        }
+                    }
+
                 }
+
             }
         }
     }
@@ -507,63 +511,58 @@
                     }
 
                     @include desktop {
-                        margin-bottom: 175px;
+                        margin-bottom: 165px;
                     }
                 }
                 .link {
-                    // width: 120px;
-                    // height: 35px;
-                    // padding-bottom: 10px;
-                    // padding-right: 20px;
 
-                    padding: 10px ;
-
-                    position: relative;
                     color: $fc-link;
 
-                    @include pad {
-                        width: 200px;
-                        height: 60px;
-                    }
-
-                    i {
-                        font-size: 20px;
-
-                        @include pad {
-                            font-size: 30px;
-                        }
-                    }
-                    &::after {
-                        content: "";
-                        width: 100px;
-                        height: 1px;
-                        background-color: $fc-line;
-                        position: absolute;
-                        right: 8px;
-                        top: 85%;
-
-                        @include pad {
-                            width: 147px;
-                            right: 0px;
-                            top: 50px;
-                        }
-                    }
-
-                    &:hover {
-                        color: white;
-                        font-weight: bold;
-                        background-color: $comp-link-hover;
-                        opacity: 0.6;
-
+                    h4{
+                        padding: 15px;
+                        position: relative;
                         &::after {
-                            background-color: white;
-                            height: 2px;
+                            content: "";
+                            width: 100px;
+                            height: 1px;
+                            background-color: $fc-line;
+                            position: absolute;
+                            right: 8px;
+                            top: 85%;
 
                             @include pad {
-                                height: 3px;
+                                width: 147px;
+                                right: 0px;
+                                top: 50px;
                             }
                         }
+                        &:hover {
+                            color: white;
+                            font-weight: bold;
+                            background-color: $comp-link-hover;
+                            opacity: 0.6;
+
+
+                            &::after {
+                                background-color: white;
+                                height: 2px;
+
+                                @include pad {
+                                    height: 3px;
+                                }
+                            }
+                        }
+
+                        i {
+                            font-size: 20px;
+
+                            @include pad {
+                                font-size: 30px;
+                            }
+                        }
+
                     }
+
                 }
             }
 
@@ -624,17 +623,17 @@
             }
 
             @include notebook() {
-                top: -10%;
+                top: -0%;
                 right: 0%;
             }
 
             @include desktop {
-                top: -23%;
+                top: -5%;
                 right: -2%;
             }
 
             @include news_1500px {
-                top: -23%;
+                top: -10%;
                 right: 0%;
             }
         }
@@ -765,28 +764,29 @@
                             }
                         }
 
-                        .fa-slash {
-                            font-size: 50px;
-                            font-weight: 100;
-                            color: white;
-                            transform: rotate(275deg);
+                        .slash{
                             position: absolute;
-                            top: 22%;
-                            left: 15%;
+                            top: 10%;
+                            left: 10%;
+                            transform: rotate(0deg);
 
                             @include pad {
-                                font-size: 130px;
-                                top: 20%;
-                                left: 10%;
+                                transform: rotate(-2deg);
+                                top: 15%;
+                                left: 13%;
                             }
-                        }
-                        &:hover {
-                            content: url("http://dummyimage.com/90x90/eb00eb/fff");
 
-                            @include pad {
-                                content: url("http://dummyimage.com/210x210/eb00eb/fff");
+                            img{
+                                width: 70px;
+                                height: 70px;
+
+                                @include pad{
+                                    width: 150px;
+                                    height: 150px;
+                                }
                             }
                         }
+                        
                     }
 
                     .text {
@@ -796,7 +796,7 @@
                         border-radius: 0px 10px 10px 0;
                         width: 175px;
                         @include mobile{
-                            width: 100%;    
+                            width: 100%;
                         }
 
                         @include pad {
@@ -858,8 +858,7 @@
                 position: relative;
                 font-size: 24px;
                 text-decoration: none;
-                color: rgb(187, 145, 109);
-
+                color: $comp-link-hover;
                 i {
                     font-size: 30px;
                 }
@@ -868,7 +867,7 @@
                     content: "";
                     width: 140px;
                     height: 1px;
-                    background-color: rgb(187, 145, 109);
+                    background-color: $comp-link-hover;
                     position: absolute;
                     left: 60px;
                     top: 45px;
@@ -877,7 +876,7 @@
                 &:hover {
                     color: white;
                     font-weight: bold;
-                    background-color: #964915;
+                    background-color: $comp-link-hover;
                     opacity: 0.6;
 
                     &::after {
@@ -889,10 +888,6 @@
         }
 
         .link {
-            // width: 120px;
-            // height: 35px;
-            // padding-bottom: 10px;
-            // padding-right: 20px;
 
             padding: 10px;
             text-align: center;
@@ -963,7 +958,7 @@
         z-index: -1;
 
         @include pad {
-            height: 850px;
+            height: 640px;
         }
     }
     .container {
@@ -1047,7 +1042,7 @@
 
                     .card-body {
                         padding-top: 28px;
-                       
+
                         .product_name {
                             margin-bottom: 0px;
                             font-weight: bold;
@@ -1153,7 +1148,7 @@
     .pic-gray {
         display: none;
         background-color: rgb(238, 236, 235);
-        
+
         @include pad {
             display: block;
             width: 100%;

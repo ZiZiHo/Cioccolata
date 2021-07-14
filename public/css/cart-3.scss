@@ -6,7 +6,6 @@ main {
     display: flex;
     justify-content: center;
     margin: auto;
-    flex-wrap: wrap;
 
     // 表頭banner
     .banner {
@@ -46,6 +45,8 @@ main {
 
         h5 {
             color: $fc-title-en;
+            letter-spacing: 5px;
+            margin-top: 10px;
         }
     }
 

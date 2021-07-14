@@ -23,43 +23,37 @@
                     <div id="swiper-1" class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <!-- <img src="/img/index/1920x1080 banner01.jpg" alt=""> -->
+
                                 <div class="banner-img"
                                     style="background-image: url({{ asset('/img/index/banner/1920x1080\ banner01.jpg') }});">
+
                                 </div>
                             </div>
-                            <!-- <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url(/img/index/banner/01.jpg);"></div>
-                            </div> -->
-                            <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url({{ asset('/img/index/banner/02.jpg') }});"></div>
-                            </div>
-                            <!-- <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url(/img/index/banner/03.jpg);"></div>
-                            </div> -->
 
                             <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url({{ asset('/img/index/banner/05.jpg') }});"></div>
+                                <div class="banner-img"
+                                    style="background-image: url({{ asset('/img/index/banner/02.jpg') }});"></div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="banner-img"
+                                    style="background-image: url({{ asset('/img/index/banner/05.jpg') }});"></div>
                             </div>
 
                             <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url({{ asset('/img/index/banner/04.jpg') }});"></div>
+                                <div class="banner-img"
+                                    style="background-image: url({{ asset('/img/index/banner/04.jpg') }});"></div>
                             </div>
 
-                            <!-- <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url(/img/index/banner/06.jpg);"></div>
-                            </div> -->
+
                             <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url({{ asset('/img/index/banner/07.jpg') }});"></div>
+                                <div class="banner-img"
+                                    style="background-image: url({{ asset('/img/index/banner/07.jpg') }});"></div>
                             </div>
-                            <!-- <div class="swiper-slide">
-                                <div class="banner-img" style="background-image: url(/img/index/banner/08.jpg); transform:rotate(180deg);"></div>
-                            </div> -->
+
                         </div>
-                        <!-- Add Arrows -->
-                        <!-- <div class="swiper-button-next swiper-button-disabled"></div> -->
-                        <!-- <div class="swiper-button-prev swiper-button-disabled"></div> -->
-                        <!-- <div class="swiper-pagination"></div> -->
+
                     </div>
 
                     <div class="col-12 logo d-flex justify-content-center wow slideInDown" data-wow-duration="1s">
@@ -88,7 +82,8 @@
                         <img class="" src="{{ asset('/img/index/index-aboutus.png') }}" class="about-us" alt=""
                             style="width: 100%; height: auto;">
 
-                        <img class="pic-sm d-none d-md-block wow rollIn" src="{{ asset('/img/index/chocolate-01-300x260.png') }}" alt=""
+                        <img class="pic-sm d-none d-md-block wow rollIn"
+                            src="{{ asset('/img/index/chocolate-01-300x260.png') }}" alt=""
                             style="width: 40%; height: auto;" data-wow-delay="0s" data-wow-duration="1s">
                     </div>
                     <div class="col-md-6 text d-flex flex-column justify-content-center align-items-center">
@@ -102,9 +97,12 @@
                             <p>巧遇農情是由天奕和佳慧在2014年共同創辦，他們在屏科大就讀時，輔導農民進行可可到巧克力的製作過程，也就是歐美很流行的Bean to
                                 Bar，過程中發現了其中的奧妙，於是畢業後繼續跟農民合作，持續收購農民的可可豆來製作巧克力。</p>
                             <!-- 連到認識我們頁 -->
-                            <a class="link d-flex justify-content-center align-items-center" href="">
+                            <!-- 20210713 調整了解更多html結構 -->
+                            <a class="link d-flex justify-content-md-end justify-content-center align-items-center col-12"
+                                href="/about">
                                 <h4>了解更多
-                                </h4> <i class="fal fa-long-arrow-right ml-1 ml-md-m ml-1d-3"></i>
+                                    <i class="fal fa-long-arrow-right ml-1 ml-md-m ml-1d-3"></i>
+                                </h4>
                             </a>
                         </div>
 
@@ -138,10 +136,14 @@
                     <div class="col-lg-5 col-xl-6 d-flex flex-column justify-content-xl-start justify-content-md-center wow fadeInUp"
                         data-wow-delay="0.5s" data-wow-duration="2s">
                         <div class="row no-gutters">
-                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-01-325x150.jpg') }}" alt=""></div>
-                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-02-325x150.jpg') }}" alt=""></div>
-                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-03-325x150.jpg') }}" alt=""></div>
-                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-04-325x150.jpg') }}" alt=""></div>
+                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-01-325x150.jpg') }}"
+                                    alt=""></div>
+                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-02-325x150.jpg') }}"
+                                    alt=""></div>
+                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-03-325x150.jpg') }}"
+                                    alt=""></div>
+                            <div class="pic col-md-6"><img src="{{ asset('/img/index/phone-index-04-325x150.jpg') }}"
+                                    alt=""></div>
                         </div>
                     </div>
 
@@ -159,12 +161,14 @@
                             </div>
                             <div class="col-12 d-flex justify-content-center justify-content-lg-start">
                                 <!-- 連到認識巧克力頁 -->
-                                <a class="link d-flex justify-content-center align-items-center" href="">
-                                    <h4>了解更多</h4><i class="fal fa-long-arrow-right ml-md-3 ml-1"></i>
+                                <!-- 20210713 調整了解更多html結構 -->
+                                <a class="link d-flex justify-content-lg-end justify-content-center align-items-center col-12"
+                                    href="/knowledge">
+                                    <h4>了解更多
+                                        <i class="fal fa-long-arrow-right ml-1 ml-md-m ml-1d-3"></i>
+                                    </h4>
                                 </a>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -174,11 +178,13 @@
         <div class="section-3">
             <div class="container px-0 position-relative">
 
-                <img class="pic-sm-index d-none d-md-block wow zoomIn" src="{{ asset('/img/index/chocolate-02-350x440.png') }}" alt=""
-                    data-wow-delay="3s" data-wow-duration="1s">
+                <img class="pic-sm-index d-none d-md-block wow zoomIn"
+                    src="{{ asset('/img/index/chocolate-02-350x440.png') }}" alt="" data-wow-delay="3s"
+                    data-wow-duration="1s">
 
-                <img class="pic-sm-phone d-block d-md-none wow zoomIn" src="{{ asset('/img/index/chocolate-01-300x260.png') }}" alt=""
-                    width="20%" data-wow-delay="3s" data-wow-duration="1s">
+                <img class="pic-sm-phone d-block d-md-none wow zoomIn"
+                    src="{{ asset('/img/index/chocolate-01-300x260.png') }}" alt="" width="20%" data-wow-delay="3s"
+                    data-wow-duration="1s">
 
                 <div class="col-md-12 d-md-none wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s">
                     <div class="title">
@@ -200,31 +206,31 @@
                             data-wow-duration="1s">
                             <!-- 要長的最新消息 -->
                             <div class="col-md-12 col-xl-5 news d-flex">
+
                                 <!-- 日期，hover換圖在SCSS:783行，可取消 -->
-                                <div class="date">
+                                <div class="date" style="content:'{{ asset('$news[0]->media') }}' ">
                                     <div class="row no-gutters">
                                         <!-- 月 -->
-                                        <div class="col-12"><span class="month">06</span>
+                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[0]->date)) }}</span>
                                         </div>
-                                        <i class="fal fa-slash"></i>
+                                        <!-- 20210713更改斜線樣式 -->
+                                        <div class="slash">
+                                            <img src="{{ asset('/img/index/slash.png') }}" alt="">
+                                        </div>
                                         <!-- 日 -->
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">30</span>
+                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[0]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="text">
                                     <!-- 消息標題 -->
-                                    <h3 class="mb-0">Lorem ipsum dolor sit fhfxsdhfhfxsdhfhfsh</h3>
+                                    <h3 class="mb-0">{{ $news[0]->title }}</h3>
                                     <!-- 消息內容 -->
-                                    <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
-                                        beatae dolores cum?
-                                        Mollitia animi est illum illo aliquid nihil neque, asperiores sed provident
-                                        eligendi,
-                                        explicabo distinctio numquam quidem assumenda iure.</p>
+                                    <p class="mb-0">{{ $news[0]->summary }}</p>
                                     <!-- 連到外部連結 -->
                                     <div class="more">
-                                        <a href="">more</a>
+                                        <a href="{{ $news[0]->readmore }}">more</a>
                                     </div>
                                 </div>
 
@@ -232,30 +238,26 @@
                             <div class="col-md-12 col-xl-5 news d-flex">
                                 <div class="date">
                                     <div class="row no-gutters">
-                                        <div class="col-12"><span class="month">06</span>
+                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[1]->date)) }}</span>
                                         </div>
-                                        <i class="fal fa-slash"></i>
-
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">30</span>
+                                        <!-- 20210713更改斜線樣式 -->
+                                        <div class="slash">
+                                            <img src="{{ asset('/img/index/slash.png') }}" alt="">
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[1]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="photo" style="background-image: url(https://dummyimage.com/210x210);"
-                                    style="height: auto; width: auto; object-fit: contain">
-
-                                </div>
 
                                 <div class="text">
-                                    <h3 class="mb-0">Lorem ipsum dolor sit fhfxsdhfhfxsdhfhfsh</h3>
-                                    <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
-                                        beatae dolores cum?
-                                        Mollitia animi est illum illo aliquid nihil neque, asperiores sed provident
-                                        eligendi,
-                                        explicabo distinctio numquam quidem assumenda iure.</p>
-
+                                    <!-- 消息標題 -->
+                                    <h3 class="mb-0">{{ $news[1]->title }}</h3>
+                                    <!-- 消息內容 -->
+                                    <p class="mb-0">{{ $news[1]->summary }}</p>
+                                    <!-- 連到外部連結 -->
                                     <div class="more">
-                                        <a href="">more</a>
+                                        <a href="{{ $news[1]->readmore }}">more</a>
                                     </div>
                                 </div>
 
@@ -269,27 +271,26 @@
                                 <div class="date">
                                     <div class="row no-gutters">
                                         <!-- 月 -->
-                                        <div class="col-12"><span class="month">06</span>
+                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[2]->date)) }}</span>
                                         </div>
-                                        <i class="fal fa-slash"></i>
+                                        <!-- 20210713更改斜線樣式 -->
+                                        <div class="slash">
+                                            <img src="{{ asset('/img/index/slash.png') }}" alt="">
+                                        </div>
                                         <!-- 日 -->
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">30</span>
+                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="text">
                                     <!-- 消息標題 -->
-                                    <h3 class="mb-0">Lorem ipsum dolor sit fhfxsdhfhfxsdhfhfsh</h3>
+                                    <h3 class="mb-0">{{ $news[2]->title }}</h3>
                                     <!-- 消息內容 -->
-                                    <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
-                                        beatae dolores cum?
-                                        Mollitia animi est illum illo aliquid nihil neque, asperiores sed provident
-                                        eligendi,
-                                        explicabo distinctio numquam quidem assumenda iure.</p>
+                                    <p class="mb-0">{{ $news[2]->summary }}</p>
                                     <!-- 連到外部連結 -->
                                     <div class="more">
-                                        <a href="">more</a>
+                                        <a href="{{ $news[2]->readmore }}">more</a>
                                     </div>
                                 </div>
 
@@ -297,28 +298,26 @@
                             <div class="col-md-12 col-xl-5 news d-flex">
                                 <div class="date">
                                     <div class="row no-gutters">
-                                        <div class="col-12"><span class="month">06</span>
+                                        <div class="col-12"><span class="month">{{ date('m', strtotime($news[3]->date)) }}</span>
                                         </div>
-                                        <i class="fal fa-slash"></i>
-                                        <div class="col-12 d-flex justify-content-end"><span class="day">30</span>
+                                        <!-- 20210713更改斜線樣式 -->
+                                        <div class="slash">
+                                            <img src="{{ asset('/img/index/slash.png') }}" alt="">
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end"><span class="day">{{ date('d', strtotime($news[3]->date)) }}</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="photo" style="background-image: url(https://dummyimage.com/210x210);"
-                                    style="height: auto; width: auto; object-fit: contain">
-
-                                </div>
 
                                 <div class="text">
-                                    <h3 class="mb-0">Lorem ipsum dolor sit fhfxsdhfhfxsdhfhfsh</h3>
-                                    <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
-                                        beatae dolores cum?
-                                        Mollitia animi est illum illo aliquid nihil neque, asperiores sed provident
-                                        eligendi,
-                                        explicabo distinctio numquam quidem assumenda iure.</p>
+                                    <!-- 消息標題 -->
+                                    <h3 class="mb-0">{{ $news[3]->title }}</h3>
+                                    <!-- 消息內容 -->
+                                    <p class="mb-0">{{ $news[3]->summary }}</p>
+                                    <!-- 連到外部連結 -->
                                     <div class="more">
-                                        <a href="">more</a>
+                                        <a href="{{ $news[3]->readmore }}">more</a>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +326,7 @@
 
                     <div class="d-md-block d-none wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s">
                         <!-- 連到消息頁面 -->
-                        <a class="col-md-12 d-flex justify-content-center align-items-center " href="">
+                        <a class="col-md-12 d-flex justify-content-center align-items-center " href="/news">
                             <div class="link d-flex justify-content-center align-items-center">
                                 <h4>了解更多</h4>
                                 <i class="fal fa-long-arrow-right ml-md-3 ml-1"></i>
@@ -338,7 +337,7 @@
                 </div>
 
                 <div class="d-block d-md-none wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s">
-                    <a class="col-md-12 d-flex justify-content-center align-items-center d-none" href="">
+                    <a class="col-md-12 d-flex justify-content-center align-items-center d-none" href="/news">
                         <div class="link d-flex justify-content-center align-items-center">
                             <h4>了解更多</h4>
                             <i class="fal fa-long-arrow-right ml-md-3 ml-1"></i>
@@ -386,176 +385,34 @@
                     data-wow-delay="1s" data-wow-duration="1s">
                     <div class="swiper-wrapper" id="swiper-wrapper-f62696a9353e2a810" aria-live="polite"
                         style="transition-duration: 0ms; transform: translate3d(-1576px, 0px, 0px);">
-                        <div class="swiper-slide" role="group" aria-label="1 / 9" style="margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
+                        @for ($i = 0; $i < 9; $i++)
+                            <div class="swiper-slide" role="group" aria-label="1 / 9" style="margin-right: 50px;">
+                                <!-- 產品卡片 -->
+                                <div class="card d-flex justify-content-center">
+                                    <!-- 產品圖片 -->
+                                    <img src="{{ $product[$i]->photo }}" style="height: 400px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body row no-gutters d-flex justify-content-between">
+                                        <!-- 產品名稱 -->
+                                        <h4 class="product_name col-lg-7">{{ $product[$i]->name }}</h4>
+                                        <!-- 產品價格 -->
+                                        <p class="price col-lg-5 d-none d-lg-block">
+                                            {{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
+                                        <!-- 產品內容 -->
+                                        <p class="content col-md-12">{{ $product[$i]->ingredient }}</p>
+                                        <!-- 產品價格 -->
+                                        <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">
+                                            {{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="2 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="3 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide swiper-slide-prev" role="group" aria-label="4 / 9"
-                            style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide swiper-slide-active" role="group" aria-label="5 / 9"
-                            style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="6 / 9"
-                            style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="7 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="8 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="9 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endfor
                     </div>
                     <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
                         aria-controls="swiper-wrapper-53824a171ef1d279"></div>
                     <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
                         aria-controls="swiper-wrapper-53824a171ef1d279"></div>
-                    <!-- <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
-                            class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
-                            role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet"
-                            tabindex="0" role="button" aria-label="Go to slide 3"></span><span
-                            class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="Go to slide 4"></span><span
-                            class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
-                            aria-label="Go to slide 5"></span></div> -->
+
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
                 <!-- 手機板出現 Swiper -->
@@ -565,160 +422,25 @@
                         style="transition-duration: 0ms; transform: translate3d(-1576px, 0px, 0px);">
                         <div class="swiper-slide" role="group" aria-label="1 / 9" style="margin-right: 50px;">
                             <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
+                            @for ($i = 0; $i < 9; $i++)
+                                <div class="card d-flex justify-content-center">
+                                    <!-- 產品圖片 -->
+                                    <img src="{{ $product[$i]->photo }}" class="card-img-top" alt="...">
+                                    <div class="card-body row no-gutters d-flex justify-content-between px-0">
+                                        <!-- 產品名稱 -->
+                                        <h4 class="product_name col-lg-7">{{ $product[$i]->name }}</h4>
+                                        <!-- 產品價格 -->
+                                        <p class="price col-lg-5 d-none d-lg-block">{{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
+                                        <!-- 產品內容 -->
+                                        <p class="content col-md-12">{{ $product[$i]->ingredient }}</p>
+                                        <!-- 產品價格 -->
+                                        <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">{{ $product[$i]->price }}/{{ $product[$i]->unit }}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            @endfor
+
                         </div>
-                        <div class="swiper-slide" role="group" aria-label="2 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="3 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide swiper-slide-prev" role="group" aria-label="4 / 9"
-                            style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide swiper-slide-active" role="group" aria-label="5 / 9"
-                            style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="6 / 9"
-                            style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="7 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="8 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="9 / 9" style="width: 344px; margin-right: 50px;">
-                            <!-- 產品卡片 -->
-                            <div class="card d-flex justify-content-center">
-                                <!-- 產品圖片 -->
-                                <img src="/img/index/teaBar02-550x660.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row no-gutters d-flex justify-content-between px-0">
-                                    <!-- 產品名稱 -->
-                                    <h4 class="product_name col-lg-7">純手工爆香可可杏仁豆</h4>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-lg-5 d-none d-lg-block">300元/罐</p>
-                                    <!-- 產品內容 -->
-                                    <p class="content col-md-12">杏仁、可可膏、可可脂、</p>
-                                    <!-- 產品價格 -->
-                                    <p class="price col-md-12 d-block d-lg-none d-flex justify-content-start">300元/罐</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
                         aria-controls="swiper-wrapper-53824a171ef1d279"></div>
@@ -729,7 +451,7 @@
 
                 <div class="col-md-12 d-flex justify-content-center align-items-center mb-5">
                     <!-- 連到產品頁 -->
-                    <a href="">
+                    <a href="/product">
                         <div class="link d-flex justify-content-center align-items-center wow fadeInUp">
                             <h4>前往購物</h4> <i class="fas fa-shopping-cart ml-md-3" data-wow-delay="1s"
                                 data-wow-duration="1s"></i>
@@ -741,6 +463,9 @@
         </div>
 
         <div class="pics">
+            <!-- 實驗圖片 -->
+            <!-- <img class="wow slideInLeft" src="/img/index/test.jpg" alt=""
+                 data-wow-delay="1s" data-wow-duration="1s"> -->
 
             <img class="wow slideInLeft" src="{{ asset('/img/index/phone-index-375x226.jpg') }}" alt=""
                 style="max-width: 100%; height: auto;" data-wow-delay="1s" data-wow-duration="1s">
@@ -818,7 +543,5 @@
 
         // activate wow.js
         new WOW().init();
-
-
     </script>
 @endsection

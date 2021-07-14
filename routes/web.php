@@ -22,6 +22,7 @@ Route::get('/', 'FrontController@index');
 Route::get('/about', 'FrontController@about');
 Route::get('/knowledge', 'FrontController@knowledge');
 Route::get('/diy', 'FrontController@diy');
+Route::get('/news', 'FrontController@news');
 
 Route::get('/product', 'FrontController@product');
 Route::post('/product/add', 'FrontController@add');

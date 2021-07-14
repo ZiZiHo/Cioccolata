@@ -12,10 +12,8 @@
 
 @section('main')
     <main>
-        <a href="{{ asset('/shopping-car/1') }}" class="cart">
-            <div class="quantity">{{ $count }}</div>
-            <i class="fal fa-shopping-cart"></i>
-        </a>
+        
+
 
         <a href="#ankor-top">
             <div class="back-to-top">TOP</div>

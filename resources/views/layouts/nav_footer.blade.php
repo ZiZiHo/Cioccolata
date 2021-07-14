@@ -40,11 +40,13 @@
     <div class="burger">
         <span></span>
     </div>
+    @if ($count)
+        <a href="{{ asset('/shopping-car/1') }}" class="cart">
+            <div class="quantity">{{ $count }}</div>
+            <i class="fal fa-shopping-cart"></i>
+        </a>
+    @endif
 
-    <a href="{{ asset('/shopping-car/1') }}" class="cart">
-        <div class="quantity">{{ $count }}</div>
-        <i class="fal fa-shopping-cart"></i>
-    </a>
 
     <nav>
         <ul class="main">
@@ -61,9 +63,8 @@
             @else
                 <li><a href="{{ asset('/member') }}"><i class="fal fa-user-alt"></i>會員專頁</a></li>
                 <li>
-                    <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                         <i class="fal fa-user-alt"></i>會員登出
                     </a>
 

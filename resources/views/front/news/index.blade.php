@@ -264,7 +264,7 @@
                             <!-- 活動圖片 -->
                             <div class="pic d-flex justify-content-center align-items-center mr-md-2 wow fadeInLeft"
                                 data-wow-delay="1s" data-wow-duration="1s">
-                                <img src="{{ $event[0]->media }}" alt="" style="max-height: 100%">
+                                <img src="{{ $event[0]->media }}" alt="">
                             </div>
                         </div>
                         <!-- 20210713 修改html -->
@@ -290,7 +290,7 @@
                             <!-- 活動圖片 -->
                             <div class="pic d-flex justify-content-center align-items-center mr-md-2 wow fadeInLeft"
                                 data-wow-delay="1s" data-wow-duration="1s">
-                                <img src="{{ $event[1]->media }}" alt="" style="max-height: 100%">
+                                <img src="{{ $event[1]->media }}" alt="" >
                             </div>
                         </div>
                         <!-- 20210713 修改html -->

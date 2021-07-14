@@ -123,10 +123,10 @@
             position: relative;
 
             @include notebook {
-                padding-top: 125px;
-                padding-left: 210px;
-                padding-bottom: 25px;
-                padding: 100px 60px 125px;
+                // padding-top: 125px;
+                // padding-left: 210px;
+                // padding-bottom: 25px;
+                padding: 100px 60px 5px;
             }
 
             .title {
@@ -151,6 +151,50 @@
                         position: absolute;
                         left: -210px;
                         top: 50%;
+                    }
+                }
+            }
+
+            .swiper-container {
+                padding-bottom: 50px;
+
+                @include pad{
+                    padding-bottom: 100px;
+                }
+                .swiper-pagination-bullets {
+                    
+                    top: 85%; 
+                    @include mobile{
+                        top: 90%;   
+
+                    }
+                    @include pad {
+                        top: 90%;    
+                    }
+
+                    @include notebook{
+                        top: 90%;  
+
+                    }
+
+                    @include desktop{
+                        top: 85%;  
+
+                    }
+                    .swiper-pagination-bullet {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: $comp-link;
+                        
+
+                        @include pad {
+                            width: 25px;
+                            height: 25px;
+                        }
+                        &:hover {
+                            background-color: $comp-link-hover;
+                        }
                     }
                 }
             }
@@ -213,7 +257,7 @@
                             }
                         }
 
-                        .slash{
+                        .slash {
                             position: absolute;
                             top: 10%;
                             left: 10%;
@@ -225,18 +269,24 @@
                                 left: 13%;
                             }
 
-                            img{
+                            img {
                                 width: 70px;
                                 height: 70px;
 
-                                @include pad{
+                                @include pad {
                                     width: 150px;
                                     height: 150px;
                                 }
                             }
                         }
 
-                       
+                        // &:hover {
+                        //     content: url("http://dummyimage.com/90x90/eb00eb/fff");
+
+                        //     @include pad {
+                        //         content: url("http://dummyimage.com/210x210/eb00eb/fff");
+                        //     }
+                        // }
                     }
 
                     .text {
@@ -359,9 +409,7 @@
         }
 
         .pic {
-
-            img{
-
+            img {
                 width: 300px;
                 height: auto;
 
@@ -379,16 +427,13 @@
 
                 @include desktop {
                     width: 650px;
-
                 }
 
-                @include news_1500px(){
+                @include news_1500px() {
                     width: 800px;
-
                 }
             }
         }
-
 
         .text {
             margin-top: 40px;
@@ -437,7 +482,7 @@
                 line-height: 30px;
             }
 
-            a{
+            a {
                 text-align: end;
             }
 
@@ -489,38 +534,34 @@
                 border: none;
             }
 
-            .pic{
+            .pic {
+                width: 100px;
+                height: 100px;
 
-                    width: 100px;
-                    height: 100px;
+                @include mobile {
+                    width: 200px;
+                    height: 200px;
+                }
 
+                @include pad {
+                    width: 300px;
+                    height: 400px;
+                }
 
+                @include notebook {
+                    width: 400px;
+                    height: 500px;
+                }
 
-                    @include mobile{
-                        width: 200px;
-                        height: 200px;
-                    }
+                @include desktop {
+                    width: 500px;
+                    height: 500px;
+                }
 
-                    @include pad{
-                        width: 300px;
-                        height: 400px;
-                    }
-
-                    @include notebook{
-                        width: 400px;
-                        height: 500px;
-                    }
-
-                    @include desktop{
-                        width: 500px;
-                        height: 500px;
-                    }
-
-                    img{
-                        max-width: 100%;
-                        height: auto;
-
-                    }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
             }
             .text {
                 margin-top: 20px;
@@ -636,42 +677,39 @@
                 margin-bottom: 30px;
             }
 
-            .pic{
-
+            .pic {
                 width: 210px;
                 height: 135px;
 
-                img{
+                img {
                     max-width: 100%;
                     height: auto;
                 }
 
-                @include mobile{
-
+                @include mobile {
                     width: 210px;
                     height: 135px;
                 }
 
-                @include pad{
+                @include pad {
                     width: 350px;
                     height: 300px;
                 }
 
-                @include notebook{
-                    width:400px;
-                    height:350px;
+                @include notebook {
+                    width: 400px;
+                    height: 350px;
                 }
 
-                @include desktop{
-                    width:600px;
+                @include desktop {
+                    width: 600px;
                     height: 450px;
                 }
 
-                @include news_1500px(){
-                    width:750px;
+                @include news_1500px() {
+                    width: 750px;
                     height: 530px;
                 }
-
             }
 
             .text {
@@ -712,12 +750,10 @@
                     }
                 }
                 .bg-color {
-
                     padding: 0px;
 
                     @include pad {
                         padding: 10px 10px;
-
                     }
 
                     @include desktop {

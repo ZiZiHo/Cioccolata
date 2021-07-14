@@ -21,7 +21,7 @@ class ProductController extends Controller
     {
         $ProductType = ProductType::get();
 
-        return view('admin.product.create',compact('ProductType'));
+        return view('admin.Product.create',compact('ProductType'));
     }
 
     function store(Request $request)
@@ -46,7 +46,7 @@ class ProductController extends Controller
         $productType = ProductType::get();
         $record = Product::get()->find($id);
         // dd($record);
-        return view('admin.product.edit',compact('productType', 'record'));
+        return view('admin.Product.edit',compact('productType', 'record'));
     }
 
     function update(Request $request , $id)

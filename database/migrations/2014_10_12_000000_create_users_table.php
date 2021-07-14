@@ -23,7 +23,6 @@ class CreateUsersTable extends Migration
             $table->date('birthday');
             $table->string('phone');
             $table->string('address');
-            $table->integer('shopping_cart_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

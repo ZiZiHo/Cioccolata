@@ -23,6 +23,7 @@ class CreateOrdersTable extends Migration
             $table->longText('address');
             $table->integer('price');
             $table->string('pay_type');
+            $table->string('invoice');
             $table->integer('is_paid')->default(0);
             $table->string('shipping')->comment('運送方式');
             $table->integer('shipping_fee')->comment('運費');

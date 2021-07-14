@@ -12,7 +12,7 @@ class ProductController extends Controller
     function index()
     {
         $record = Product::get();
-
+        dd('123');
         // dd($record);
         return view('admin.product.index' , compact('record'));
     }
@@ -58,7 +58,7 @@ class ProductController extends Controller
         if($request->hasfile('photo'))
         {
             File::delete(public_path().$request->photo);
-            
+
             $requestData['photo'] = FileController::imageUpload($request->file('photo') , $productTypeName);
         }
         unset($requestData['_token']);

@@ -366,39 +366,3 @@ nav {
     visibility: visible;
   }
 }
-
-// 購物車
-.cart {
-  width: 80px;
-  height: 80px;
-  background-color: $comp-product-cart-btn;
-  position: fixed;
-  right: 20px;
-  top: 50%;
-  border-radius: 50%;
-  color: $fc-white;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-shadow: 3px 4px 13px -4px #000000;
-  box-shadow: 3px 4px 13px -4px #000000;
-  z-index: 5;
-
-  .quantity {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: red;
-    font-size: 18px;
-    font-weight: 600;
-    color: $fc-white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: -3px;
-    top: -12px;
-  }
-}

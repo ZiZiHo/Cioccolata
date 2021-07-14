@@ -40,12 +40,12 @@
     <div class="burger">
         <span></span>
     </div>
-    @if ($count)
+
         <a href="{{ asset('/shopping-car/1') }}" class="cart">
-            <div class="quantity">{{ $count }}</div>
+            <div class="quantity">{{ $count ?? '' }}</div>
             <i class="fal fa-shopping-cart"></i>
         </a>
-    @endif
+
 
 
     <nav>

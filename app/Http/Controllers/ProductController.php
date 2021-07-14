@@ -14,7 +14,7 @@ class ProductController extends Controller
         $record = Product::get();
         // dd('123');
         // dd($record);
-        return view('admin.product.index' , compact('record'));
+        return view('admin.Product.index' , compact('record'));
     }
 
     function create()

@@ -8,7 +8,7 @@
 
 
 @section('main')
-    <main>
+    <main style="flex-wrap: wrap;">
         <div class="banner"></div>
         <div class="title">
             <h1>購物車</h1>
@@ -40,7 +40,7 @@
             <hr>
 
             <div class="order-done">
-                訂單已成立，我們將盡快為您出貨，謝謝您！
+                檢視訂單
             </div>
 
             <hr>
@@ -54,13 +54,16 @@
             </div>
 
             <!-- 商品明細 -->
-            @foreach ($cartProducts as $item)
+            @foreach ($record as $item)
+            @php
+                $product = json_decode($item->old);
+            @endphp
                 <div class="list d-flex flex-wrap">
-                    <div class="col-12 col-sm-12 col-md-6 detail-txt product-name">{{ $item->name }}</div>
-                    <div class="col-4 col-sm-4 col-md-3 detail-txt price">${{ $item->price }}</div>
-                    <div class="col-4 col-sm-4 col-md-1 detail-txt quantity">x{{ $item->quantity }}</div>
+                    <div class="col-12 col-sm-12 col-md-6 detail-txt product-name">{{ $product->name }}</div>
+                    <div class="col-4 col-sm-4 col-md-3 detail-txt price">${{ $product->price }}</div>
+                    <div class="col-4 col-sm-4 col-md-1 detail-txt quantity">x{{ $item->qty }}</div>
                     @php
-                        $subTotal = $item->quantity * $item->price;
+                        $subTotal = $item->qty * $product->price ;
                     @endphp
                     <div class="col-4 col-sm-4 col-md-2 detail-txt amount">${{ number_format($subTotal) }}</div>
                 </div>
@@ -70,10 +73,9 @@
 
 
 
-
             <!-- 按鈕 -->
             <div class="form-group row button-area">
-                <a href="/admin/user" type="submit" class="btn mybtn back">回到前一頁</a>
+                <a href="/admin/order" type="submit" class="btn mybtn back">回到前一頁</a>
             </div>
         </div>
     </main>

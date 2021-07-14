@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Order;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -36,10 +37,13 @@ class UserController extends Controller
         dd($requestData);
     }
 
-    function edit()
+    function edit($id)
     {
-        dd(123);
-        return view('admin.user.create');
+        $userEmail = User::where('id' , $id)->get()->first()->email;
+
+        $record = Order::where('email',$userEmail )->get();
+
+        return view('auth.member-order-list' , compact('record'));
     }
     function delete($id)
     {

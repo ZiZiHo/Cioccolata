@@ -47,8 +47,6 @@
                     {{-- <td>{{ count() order的數量 }}</td> --}}
 
                     <td>
-                        <a type="button" href="{{ asset('/admin/order/edit') }}/{{ $item->id }}"
-                            class="btn btn-sm btn-primary">檢視詳細</a>
                         <form style="display:inline-block;"
                             action="{{ asset('/admin/order/delete') }}/{{ $item->id }}"
                             method="post">

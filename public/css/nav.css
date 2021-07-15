@@ -452,7 +452,7 @@ nav .search {
   visibility: visible;
 }
 
-.cart {
+.cart-right {
   width: 80px;
   height: 80px;
   background-color: #c4817e;
@@ -476,7 +476,7 @@ nav .search {
   box-shadow: 3px 4px 13px -4px #000000;
 }
 
-.cart .quantity {
+.cart-right .quantity {
   width: 30px;
   height: 30px;
   border-radius: 50%;

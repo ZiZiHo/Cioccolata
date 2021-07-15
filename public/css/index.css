@@ -119,7 +119,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.cart {
+.cart-right {
   width: 80px;
   height: 80px;
   background-color: #c4817e;
@@ -144,7 +144,7 @@ input::-webkit-inner-spin-button {
   z-index: 5;
 }
 
-.cart .quantity {
+.cart-right .quantity {
   width: 30px;
   height: 30px;
   border-radius: 50%;

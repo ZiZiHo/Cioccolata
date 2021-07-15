@@ -94,10 +94,10 @@
                     <div class="form-group row city-selector-set">
                         <label for="address" class="col-md-2 col-form-label mytag"><span class=required>*</span>地址：</label>
                         <div class="col-md-4 col-4">
-                            <select class="county form-control readonly"></select>
+                            <select required class="county form-control readonly"></select>
                         </div>
                         <div class="col-md-3 col-4">
-                            <select class="district form-control readonly"></select>
+                            <select required class="district form-control readonly"></select>
                         </div>
                         <div class="col-md-3 col-4">
                             <input class="zipcode form-control" name="zipcode" type="text" size="3" readonly
@@ -108,7 +108,7 @@
                     <div class="form-group row">
                         <label for="address" class="col-md-2 col-form-label mytag"></label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control readonly" id="address" name="address">
+                            <input type="text" required class="form-control readonly" id="address" name="address">
                         </div>
                     </div>
                     <hr>

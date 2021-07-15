@@ -4,7 +4,7 @@
     <script src="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"></script>
 @endsection
 
-@section('h1_title', '聯繫我們首頁')
+@section('h1_title', '訂單首頁')
 
 @section('main')
     <a type="button" class="btn btn-sm btn-success m-2" href="{{ asset('/admin/user/create') }}">新增</a>

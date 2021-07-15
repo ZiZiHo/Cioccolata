@@ -137,7 +137,7 @@
 
             <!-- 付款方式 -->
             <div class="payment row">
-                <label class="col-md-2 col-6">付款方式：</label>
+                <label  class="col-md-2 col-6">付款方式：</label>
                 <div class="item col-md-10 col-6">
                     <span class="txt"> {{ $order['pay_type'] }} </span>
                 </div>

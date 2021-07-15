@@ -185,7 +185,7 @@
 
             <!-- 右邊地圖 -->
             <div class="box-right wow fadeInRightBig" data-wow-delay="1s" data-wow-duration="1s">
-                <div class="vrtical-line"></div>
+                
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.2117360448577!2d120.68201590207406!3d24.14201268664527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d340d98a903%3A0x27e785ef5c7475e5!2z5ben6YGH6L6y5oOFIENIT01FRVQg5ben5YWL5YqbIOWPr-WPryDlsIjos6Plupcg5Y-w5Lit576O6aOf!5e0!3m2!1szh-TW!2stw!4v1625240008981!5m2!1szh-TW!2stw"

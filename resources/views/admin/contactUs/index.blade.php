@@ -13,9 +13,7 @@
             <tr>
                 <th>name</th>
                 <th>email</th>
-                <th>title</th>
                 <th>content</th>
-                <th>phone</th>
                 <th>操作</th>
             </tr>
         </thead>
@@ -42,9 +40,7 @@
             <tr>
                 <th>name</th>
                 <th>email</th>
-                <th>title</th>
                 <th>content</th>
-                <th>phone</th>
                 <th>操作</th>
             </tr>
         </tfoot>

@@ -41,10 +41,10 @@
         <span></span>
     </div>
 
-    {{-- <a href="{{ asset('/shopping-car/1') }}" class="cart-right">
+    <a href="{{ asset('/shopping-car/1') }}" class="cart-right">
         <div class="quantity">{{ $count ?? '' }}</div>
         <i class="fal fa-shopping-cart"></i>
-    </a> --}}
+    </a>
 
 
 

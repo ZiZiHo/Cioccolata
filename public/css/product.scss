@@ -31,7 +31,7 @@
 }
 
 // 購物車
-.cart-right {
+.cart {
     width: 80px;
     height: 80px;
     background-color: $comp-product-cart-btn;
@@ -531,7 +531,7 @@
                             padding: 0 5px;
                             text-align: center;
                             background-color: white;
-
+                            
                             &::placeholder {
                                 color: black;
                                 opacity: 1;
@@ -722,7 +722,7 @@
     .pic-gray {
         display: none;
         background-color: rgb(238, 236, 235);
-
+        
         @include pad {
             display: block;
             width: 100%;
